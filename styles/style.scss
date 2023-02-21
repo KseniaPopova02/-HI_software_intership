@@ -216,3 +216,155 @@
     }
   }
 }
+
+.company {
+  padding-top: 234px;
+  &__name {
+    text-align: center;
+    @extend %lb-bold;
+    font-size: 42px;
+    line-height: 52px;
+  }
+  &__name-letters {
+    background-color: #000;
+    color: #fff;
+    padding-top: 17px;
+    padding-left: 17px;
+  }
+  &__slogan {
+    text-align: center;
+    @extend %lb-regular;
+    font-size: 20px;
+    line-height: 30px;
+    max-width: 370px;
+    margin: 30px auto;
+  }
+}
+
+.about {
+  background-color: #1c1c1c;
+  margin-top: 196px;
+  color: #fff;
+  position: relative;
+  z-index: -5;
+  &__firstArticle {
+    &::after {
+      content: "";
+      height: 1016px;
+      background-color: #fff;
+      width: 8px;
+      left: 1104px;
+      top: 0;
+      position: absolute;
+      z-index: -1;
+    }
+  }
+  &__firstArticle-context {
+    margin: 172px 60px 52px 96px;
+  }
+  &__firstArticle-title {
+    width: 444px;
+  }
+  &__firstArticle-text {
+    width: 436px;
+  }
+  &__firstArticle-image {
+    margin: 146px 86px 0 0;
+  }
+  &__secondArticle {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    top: 461px;
+    flex-direction: column;
+    margin: 0 361px 465px 327px;
+  }
+  &__secondArticle-context {
+    margin-left: 30px;
+  }
+  &__secondArticle-title {
+    width: 400px;
+  }
+  &__secondArticle-text {
+    width: 524px;
+  }
+  &__thirdArticle {
+    margin-top: 752px;
+    flex-direction: column;
+    &::before {
+      content: "";
+      background-color: #fff;
+      position: absolute;
+      height: 1452px;
+      width: 8px;
+      left: 221px;
+      bottom: 0;
+      border-radius: 0px;
+    }
+  }
+  &__thirdArticle-context {
+    margin: 0 398px 76px 298px;
+  }
+  &__thirdArticle-title {
+    width: 612px;
+  }
+  &__thirdArticle-text {
+    width: 566px;
+  }
+  &__thirdArticle-image {
+    display: flex;
+    justify-content: end;
+    img + img {
+      padding-left: 20px;
+    }
+  }
+}
+
+.about_article {
+  display: flex;
+}
+.about_article_title {
+  @extend %lb-regular;
+  font-size: 42px;
+  line-height: 52px;
+  margin-bottom: 31px;
+}
+
+.reason {
+  padding-top: 226px;
+  padding-bottom: 237px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  &__one {
+    font-size: 42px;
+    @extend %lb-regular;
+    line-height: 52px;
+    margin: 0 auto 35px auto;
+    width: 427px;
+  }
+  &__two {
+    width: 434px;
+    margin: 0 auto;
+  }
+}
+
+.connection {
+  background-color: #1c1c1c;
+  color: #fff;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  &__question {
+    padding-top: 119px;
+    @extend %lb-regular;
+    font-size: 33px;
+    line-height: 40px;
+    width: 331px;
+    margin: 0 auto 17px auto;
+  }
+  &__text {
+    width: 332px;
+    margin: 0 auto 150px auto;
+  }
+}
