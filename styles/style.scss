@@ -2,6 +2,7 @@
 @import "fonts";
 @import "global";
 
+// Home page
 .header {
   padding-top: 31px;
   &__nav {
@@ -164,4 +165,54 @@
 .name {
   @extend %os-bold;
   font-size: 20px;
+}
+
+// Tags page
+
+.search {
+  padding-top: 213px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  &__input {
+    width: 707px;
+    border: solid #000 1px;
+    border-radius: 25px;
+    padding: 20px;
+  }
+  &__input-wrapper {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  &__button {
+    position: absolute;
+    bottom: 23%;
+    left: 83%;
+    background-color: transparent;
+  }
+  &__tags-wrapper {
+    padding-top: 59px;
+  }
+  &__tags {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__tags-rows {
+    display: flex;
+    justify-content: center;
+    & + & {
+      padding-top: 25px;
+    }
+  }
+  &__tags-item {
+    border: 1px solid #000;
+    border-radius: 50px;
+    padding: 10px 14px;
+    & + & {
+      margin-left: 15px;
+    }
+  }
 }
