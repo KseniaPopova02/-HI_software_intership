@@ -1,0 +1,236 @@
+.title, .header__nav {
+  font-family: "LibreBaskerville-Bold", sans-serif;
+  font-weight: 700;
+}
+
+.name, .editor__name {
+  font-family: "OpenSans-Bold", sans-serif;
+  font-weight: 700;
+}
+
+body {
+  font-family: "OpenSans-Regular", sans-serif;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "LibreBaskerville-Bold", sans-serif;
+  src: url("../fonts/LibreBaskerville-Bold.ttf") format("ttf"), url("../fonts/LibreBaskerville-Bold.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "LibreBaskerville-Regular", sans-serif;
+  src: url("../fonts/LibreBaskerville-Regular.ttf") format("ttf"), url("../fonts/LibreBaskerville-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenSans-Bold", sans-serif;
+  src: url("../fonts/OpenSans-Bold.ttf") format("ttf"), url("../fonts/OpenSans-Bold.ttf") format("ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenSans-Regular", sans-serif;
+  src: url("../fonts/OpenSans-Regular.ttf") format("ttf"), url("../fonts/OpenSans-Regular.ttf") format("ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+body {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.container {
+  max-width: 1316px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header {
+  padding-top: 31px;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+.header__nav-wrapper {
+  display: flex;
+}
+.header__button {
+  display: flex;
+}
+.header__button-magnifier {
+  padding-right: 21px;
+  background-color: transparent;
+}
+.header__button-login {
+  background-color: transparent;
+  border: solid #000 2px;
+  border-radius: 10px;
+  padding: 8px 30px;
+}
+
+.logo__name {
+  padding-right: 31px;
+  font-size: 30px;
+}
+.logo__name-letters {
+  background-color: #000;
+  color: #fff;
+  padding-top: 17px;
+  padding-left: 17px;
+}
+
+.menu__list-item {
+  font-size: 20px;
+  display: inline-block;
+}
+.menu__list-item + .menu__list-item {
+  padding-left: 31px;
+}
+
+.pretitle {
+  font-size: 20px;
+  line-height: 27px;
+  color: rgba(28, 28, 28, 0.5);
+}
+
+.title {
+  font-size: 33px;
+  line-height: 41px;
+  padding-bottom: 12px;
+}
+
+.info {
+  color: rgba(28, 28, 28, 0.5);
+  padding-bottom: 14px;
+}
+
+.text {
+  line-height: 24px;
+}
+
+.top {
+  padding-top: 43px;
+}
+.top__article {
+  background-color: #fff;
+  position: absolute;
+  top: 0;
+  left: 45px;
+  max-width: 509px;
+  display: inline-block;
+  padding: 80px 40px;
+}
+
+.editor {
+  display: flex;
+}
+.editor__name {
+  padding: 68px 0;
+  text-align: center;
+  font-size: 42px;
+  line-height: 57px;
+  position: relative;
+}
+.editor__name::after {
+  content: "";
+  background-color: black;
+  height: 5px;
+  display: block;
+  width: 190px;
+  left: 38%;
+  margin-top: 14px;
+  position: absolute;
+}
+.editor__article {
+  display: flex;
+}
+.editor__article + .editor__article {
+  padding-top: 63px;
+}
+.editor__article-image {
+  padding-right: 55px;
+}
+.editor__article-title {
+  max-width: 430px;
+}
+.editor__article-text {
+  max-width: 430px;
+}
+
+.interior {
+  padding-top: 62px;
+}
+.interior__article {
+  background-color: #fff;
+  padding: 96px 40px;
+  max-width: 509px;
+  position: absolute;
+  top: 10%;
+  left: 56%;
+}
+
+.articles {
+  padding: 104px 0 70px 0;
+}
+.articles__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.articles__article {
+  display: flex;
+}
+.articles__article + .articles__article {
+  padding-top: 66px;
+}
+.articles__img {
+  padding-right: 37px;
+}
+.articles__text {
+  width: 538px;
+}
+.articles__tags-specific + .articles__tags-specific {
+  padding-top: 25px;
+}
+
+.name {
+  font-size: 20px;
+}/*# sourceMappingURL=style.css.map */

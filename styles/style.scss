@@ -1,0 +1,167 @@
+@import "vars";
+@import "fonts";
+@import "global";
+
+.header {
+  padding-top: 31px;
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    @extend %lb-bold;
+    font-size: 20px;
+  }
+  &__nav-wrapper {
+    display: flex;
+  }
+  &__button {
+    display: flex;
+  }
+  &__button-magnifier {
+    padding-right: 21px;
+    background-color: transparent;
+  }
+  &__button-login {
+    background-color: transparent;
+    border: solid #000 2px;
+    border-radius: 10px;
+    padding: 8px 30px;
+  }
+}
+
+.logo {
+  &__name {
+    padding-right: 31px;
+    font-size: 30px;
+  }
+  &__name-letters {
+    background-color: #000;
+    color: #fff;
+    padding-top: 17px;
+    padding-left: 17px;
+  }
+}
+
+.menu {
+  &__list-item {
+    font-size: 20px;
+    display: inline-block;
+    & + .menu__list-item {
+      padding-left: 31px;
+    }
+  }
+}
+
+.pretitle {
+  font-size: 20px;
+  line-height: 27px;
+  color: rgba(28, 28, 28, 0.5);
+}
+
+.title {
+  font-size: 33px;
+  line-height: 41px;
+  padding-bottom: 12px;
+  @extend %lb-bold;
+}
+
+.info {
+  color: rgba(28, 28, 28, 0.5);
+  padding-bottom: 14px;
+}
+
+.text {
+  line-height: 24px;
+}
+
+.top {
+  padding-top: 43px;
+  &__article {
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 45px;
+    max-width: 509px;
+    display: inline-block;
+    padding: 80px 40px;
+  }
+}
+
+.editor {
+  display: flex;
+  &__name {
+    padding: 68px 0;
+    text-align: center;
+    @extend %os-bold;
+    font-size: 42px;
+    line-height: 57px;
+    position: relative;
+    &::after {
+      content: "";
+      background-color: black;
+      height: 5px;
+      display: block;
+      width: 190px;
+      left: 38%;
+      margin-top: 14px;
+      position: absolute;
+    }
+  }
+  &__article {
+    display: flex;
+    & + & {
+      padding-top: 63px;
+    }
+  }
+  &__article-image {
+    padding-right: 55px;
+  }
+
+  &__article-title {
+    max-width: 430px;
+  }
+  &__article-text {
+    max-width: 430px;
+  }
+}
+
+.interior {
+  padding-top: 62px;
+  &__article {
+    background-color: #fff;
+    padding: 96px 40px;
+    max-width: 509px;
+    position: absolute;
+    top: 10%;
+    left: 56%;
+  }
+}
+
+.articles {
+  padding: 104px 0 70px 0;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__article {
+    display: flex;
+    & + & {
+      padding-top: 66px;
+    }
+  }
+  &__img {
+    padding-right: 37px;
+  }
+  &__text {
+    width: 538px;
+  }
+  &__tags-specific {
+    & + & {
+      padding-top: 25px;
+    }
+  }
+}
+
+.name {
+  @extend %os-bold;
+  font-size: 20px;
+}
