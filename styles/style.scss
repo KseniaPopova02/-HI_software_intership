@@ -368,3 +368,74 @@
     margin: 0 auto 150px auto;
   }
 }
+
+.article {
+  margin-top: 52px;
+  &__content {
+    text-align: center;
+  }
+  &__title {
+    margin: 54px auto 0 auto;
+    width: 790px;
+    line-height: 52px;
+  }
+  &__text {
+    width: 652px;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 24px;
+    &-p + &-p {
+      margin-top: 30px;
+    }
+  }
+  &__author {
+    display: flex;
+    margin: 72px auto 163px auto;
+    width: 655px;
+  }
+  &__author-column1 {
+    margin-right: 37px;
+  }
+  &__author-about {
+    color: rgba(28, 28, 28, 0.5);
+    font-size: 20px;
+    width: 221px;
+    margin-bottom: 15px;
+  }
+  &__author-name {
+    margin-top: 15px;
+    line-height: 41px;
+    @extend %lb-bold;
+    font-size: 33px;
+    color: #1c1c1c;
+  }
+  &__author-text {
+    line-height: 21px;
+  }
+}
+
+.arrows {
+  display: flex;
+  justify-content: space-between;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+  &__button {
+    line-height: 0;
+  }
+  &__text {
+    @extend %lb-bold;
+    font-size: 20px;
+    &-prev {
+      margin-left: 35px;
+    }
+    &-next {
+      margin-right: 35px;
+    }
+  }
+}
+
+.arrow {
+  line-height: 0;
+}

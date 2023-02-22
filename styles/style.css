@@ -1,4 +1,4 @@
-.company__name, .title, .header__nav {
+.arrows__text, .article__author-name, .company__name, .title, .header__nav {
   font-family: "LibreBaskerville-Bold", sans-serif;
   font-weight: 700;
 }
@@ -432,4 +432,73 @@ body {
 .connection__text {
   width: 332px;
   margin: 0 auto 150px auto;
+}
+
+.article {
+  margin-top: 52px;
+}
+.article__content {
+  text-align: center;
+}
+.article__title {
+  margin: 54px auto 0 auto;
+  width: 790px;
+  line-height: 52px;
+}
+.article__text {
+  width: 652px;
+  margin: 0 auto;
+  text-align: left;
+  line-height: 24px;
+}
+.article__text-p + .article__text-p {
+  margin-top: 30px;
+}
+.article__author {
+  display: flex;
+  margin: 72px auto 163px auto;
+  width: 655px;
+}
+.article__author-column1 {
+  margin-right: 37px;
+}
+.article__author-about {
+  color: rgba(28, 28, 28, 0.5);
+  font-size: 20px;
+  width: 221px;
+  margin-bottom: 15px;
+}
+.article__author-name {
+  margin-top: 15px;
+  line-height: 41px;
+  font-size: 33px;
+  color: #1c1c1c;
+}
+.article__author-text {
+  line-height: 21px;
+}
+
+.arrows {
+  display: flex;
+  justify-content: space-between;
+}
+.arrows__wrapper {
+  display: flex;
+  align-items: center;
+}
+.arrows__button {
+  line-height: 0;
+}
+.arrows__text {
+  font-size: 20px;
+}
+.arrows__text-prev {
+  margin-left: 35px;
+}
+.arrows__text-next {
+  margin-right: 35px;
+}
+
+.arrow {
+  line-height: 0;
 }/*# sourceMappingURL=style.css.map */
