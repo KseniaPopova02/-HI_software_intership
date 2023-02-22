@@ -1,9 +1,9 @@
-.arrows__text, .article__author-name, .company__name, .title, .header__nav {
+.arrows__text, .article__author-name, .company__name, .title, .menu__list-link:active {
   font-family: "LibreBaskerville-Bold", sans-serif;
   font-weight: 700;
 }
 
-.connection__question, .reason__one, .about_article_title, .company__slogan {
+.connection__question, .reason__one, .about_article_title, .company__slogan, .header__nav {
   font-family: "LibreBaskerville-Regular", sans-serif;
   font-weight: 400;
 }
@@ -130,7 +130,6 @@ body {
 .menu__list-item + .menu__list-item {
   padding-left: 31px;
 }
-
 .pretitle {
   font-size: 20px;
   line-height: 27px;

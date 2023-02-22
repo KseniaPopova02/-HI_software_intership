@@ -8,7 +8,7 @@
   &__nav {
     display: flex;
     justify-content: space-between;
-    @extend %lb-bold;
+    @extend %lb-regular;
     font-size: 20px;
   }
   &__nav-wrapper {
@@ -49,6 +49,9 @@
     & + .menu__list-item {
       padding-left: 31px;
     }
+  }
+  &__list-link:active {
+    @extend %lb-bold;
   }
 }
 
