@@ -13,6 +13,7 @@
   }
   &__nav-wrapper {
     display: flex;
+    align-items: center;
   }
   &__button {
     display: flex;
@@ -46,9 +47,7 @@
   &__list-item {
     font-size: 20px;
     display: inline-block;
-    & + .menu__list-item {
-      padding-left: 31px;
-    }
+    margin-left: 31px;
   }
   &__list-link:active {
     @extend %lb-bold;

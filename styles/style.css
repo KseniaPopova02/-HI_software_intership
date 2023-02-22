@@ -97,6 +97,7 @@ body {
 }
 .header__nav-wrapper {
   display: flex;
+  align-items: center;
 }
 .header__button {
   display: flex;
@@ -126,9 +127,7 @@ body {
 .menu__list-item {
   font-size: 20px;
   display: inline-block;
-}
-.menu__list-item + .menu__list-item {
-  padding-left: 31px;
+  margin-left: 31px;
 }
 .pretitle {
   font-size: 20px;
