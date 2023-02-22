@@ -16,6 +16,7 @@
             <div class="logo">
               <img src="images/Logo.png" alt="logo" />
             </div>
+
             <nav class="menu">
               <ul class="menu__list">
                 <li class="menu__list-item">
@@ -37,6 +38,45 @@
             </nav>
           </div>
 
+          <div class="burger__menu">
+            <button
+              class="burger__button"
+              onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+              aria-label="Main Menu"
+            >
+              <svg width="50" height="50" viewBox="0 0 100 100">
+                <path
+                  class="line line1"
+                  d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+                />
+                <path class="line line2" d="M 20,50 H 80" />
+                <path
+                  class="line line3"
+                  d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+                />
+              </svg>
+            </button>
+            <!-- <nav class="menu">
+              <ul class="menu__list">
+                <li class="menu__list-item">
+                  <a href="index.html" class="menu__list-link menu__list-active"
+                    >Home</a
+                  >
+                </li>
+                <li class="menu__list-item">
+                  <a href="tags.html" class="menu__list-link menu__list-active"
+                    >Tags</a
+                  >
+                </li>
+                <li class="menu__list-item">
+                  <a href="about.html" class="menu__list-link menu__list-active"
+                    >About</a
+                  >
+                </li>
+              </ul>
+            </nav> -->
+          </div>
+
           <div class="header__button">
             <button class="header__button-magnifier">
               <img src="../images/search.png" alt="" />
@@ -48,36 +88,36 @@
     </header>
     <section class="top">
       <div class="container">
-        <div class="top__article">
-          <p class="top__article-pretitle pretitle">FEATURED ARTICLE</p>
-          <p class="top__article-title title">
-            World’s Most Dangerous Technology Ever Made.
-          </p>
-          <p class="top__article-info info">
-            Ralph Hawkins ● May 7, 2019 (10 mins read)
-          </p>
-          <p class="top__article-text text">
-            Proident aliquip velit qui commodo officia qui consectetur dolor
-            ullamco aliquip elit incididunt. Ea minim ex consectetur excepteur.
-            Ex laborum nostrud mollit sint consectetur Lorem amet aliqua do
-            enim. Commodo duis dolor anim excepteur. In aliquip mollit nulla
-            consequat velit magna.
-          </p>
-        </div>
-        <div class="top__background">
-          <img src="../images/article_image.jpg" alt="" />
+        <div class="top__wrapper">
+          <div class="top__background"></div>
+          <div class="top__article">
+            <p class="top__article-pretitle pretitle">FEATURED ARTICLE</p>
+            <p class="top__article-title title">
+              World’s Most Dangerous Technology Ever Made.
+            </p>
+            <p class="top__article-info info">
+              Ralph Hawkins ● May 7, 2019 (10 mins read)
+            </p>
+            <p class="top__article-text text">
+              Proident aliquip velit qui commodo officia qui consectetur dolor
+              ullamco aliquip elit incididunt. Ea minim ex consectetur
+              excepteur. Ex laborum nostrud mollit sint consectetur Lorem amet
+              aliqua do enim. Commodo duis dolor anim excepteur. In aliquip
+              mollit nulla consequat velit magna.
+            </p>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="editor">
       <div class="container">
-        <h2 class="editor__name">Editor’s Picks</h2>
+        <div class="editor__name">Editor’s Picks</div>
         <div class="editor__article">
           <div class="editor__article-image">
-            <img src="../images/editors1.jpg" alt="" />
+            <img class="editor__image" src="/images/editors1.jpg" alt="" />
           </div>
-          <div class="editor__article-context">
+          <div class="editor__article-content">
             <div class="editor__article-pretitle pretitle">MINIMALISM</div>
             <div class="editor__article-title title">
               <a href="article.html"
@@ -99,9 +139,9 @@
         </div>
         <div class="editor__article">
           <div class="editor__article-image">
-            <img src="../images/editors2.jpg" alt="" />
+            <img class="editor__image" src="/images/editors2.jpg" alt="" />
           </div>
-          <div class="editor__article-context">
+          <div class="editor__article-content">
             <div class="editor__article-pretitle pretitle">TECHNOLOGY</div>
             <div class="editor__article-title title">
               <a href="article.html">Amet non Ex Officia nulla Cupidatat</a>
@@ -120,9 +160,9 @@
         </div>
         <div class="editor__article">
           <div class="editor__article-image">
-            <img src="../images/editors3.jpg" alt="" />
+            <img class="editor__image" src="/images/editors3.jpg" alt="" />
           </div>
-          <div class="editor__article-context">
+          <div class="editor__article-content">
             <div class="editor__article-pretitle pretitle">ARTICLE</div>
             <div class="editor__article-title title">
               <a href="article.html">Dolor ex Tempor Cotur Culpa li</a>
@@ -141,29 +181,31 @@
         </div>
       </div>
     </section>
+
     <section class="interior">
       <div class="container">
-        <div class="interior__article">
-          <div class="interior__article-pretitle pretitle">INTERIOR</div>
-          <div class="interior__article-title title">
-            <a href="article.html">Laborum Ullamco Sunt id ut Sunt</a>
+        <div class="interior__wrapper">
+          <div class="interior__background"></div>
+          <div class="interior__article">
+            <div class="interior__article-pretitle pretitle">INTERIOR</div>
+            <div class="interior__article-title title">
+              <a href="article.html">Laborum Ullamco Sunt id ut Sunt</a>
+            </div>
+            <div class="interior__article-info info">
+              Bessie Hawkins ● May 7, 2019 (10 mins read)
+            </div>
+            <p class="interior__article-text text">
+              Proident aliquip velit qui commodo officia qui consectetur dolor
+              ullamco aliquip elit incididunt. Ea minim ex consectetur
+              excepteur. Ex laborum nostrud mollit sint consectetur Lorem amet
+              aliqua do enim. Commodo duis dolor anim excepteur. In aliquip
+              mollit nulla consequat velit magna.
+            </p>
           </div>
-          <div class="interior__article-info info">
-            Bessie Hawkins ● May 7, 2019 (10 mins read)
-          </div>
-          <p class="interior__article-text text">
-            Proident aliquip velit qui commodo officia qui consectetur dolor
-            ullamco aliquip elit incididunt. Ea minim ex consectetur excepteur.
-            Ex laborum nostrud mollit sint consectetur Lorem amet aliqua do
-            enim. Commodo duis dolor anim excepteur. In aliquip mollit nulla
-            consequat velit magna.
-          </p>
-        </div>
-        <div class="interor__background">
-          <img src="../images/interior_mage.jpg" alt="" />
         </div>
       </div>
     </section>
+
     <section class="articles">
       <div class="container">
         <div class="articles__wrapper">
@@ -250,26 +292,33 @@
           </div>
 
           <div class="articles__tags">
-            <p class="articles__tags-specific name">tags.</p>
-            <p class="articles__tags-specific">Technology</p>
-            <p class="articles__tags-specific">Open Source</p>
-            <p class="articles__tags-specific">JavaScript</p>
-            <p class="articles__tags-specific">Minimalism</p>
-            <p class="articles__tags-specific">Self-help</p>
-            <p class="articles__tags-specific">Animals</p>
-            <p class="articles__tags-specific">Herbivores</p>
-            <p class="articles__tags-specific">HTML</p>
-            <p class="articles__tags-specific">CSS</p>
-            <p class="articles__tags-specific">PHP</p>
-            <p class="articles__tags-specific">Web Technologies</p>
-            <p class="articles__tags-specific">Career</p>
-            <p class="articles__tags-specific">Life</p>
-            <p class="articles__tags-specific">Spirituality</p>
-            <p class="articles__tags-specific">Food</p>
-            <p class="articles__tags-specific">Cooking</p>
-            <p class="articles__tags-specific">Sports</p>
-            <p class="articles__tags-specific">Racing</p>
-            <p class="articles__tags-specific">Mountain Hiking</p>
+            <div class="articles__tags-columns">
+              <p class="articles__tags-specific name">tags.</p>
+            </div>
+
+            <div class="articles__tags-columns">
+              <p class="articles__tags-specific">Technology</p>
+              <p class="articles__tags-specific">Open Source</p>
+              <p class="articles__tags-specific">JavaScript</p>
+              <p class="articles__tags-specific">Minimalism</p>
+              <p class="articles__tags-specific">Self-help</p>
+              <p class="articles__tags-specific">Animals</p>
+              <p class="articles__tags-specific">Herbivores</p>
+              <p class="articles__tags-specific">HTML</p>
+              <p class="articles__tags-specific">CSS</p>
+            </div>
+            <div class="articles__tags-columns">
+              <p class="articles__tags-specific">PHP</p>
+              <p class="articles__tags-specific">Web Technologies</p>
+              <p class="articles__tags-specific">Career</p>
+              <p class="articles__tags-specific">Life</p>
+              <p class="articles__tags-specific">Spirituality</p>
+              <p class="articles__tags-specific">Food</p>
+              <p class="articles__tags-specific">Cooking</p>
+              <p class="articles__tags-specific">Sports</p>
+              <p class="articles__tags-specific">Racing</p>
+              <p class="articles__tags-specific">Mountain Hiking</p>
+            </div>
           </div>
         </div>
       </div>
