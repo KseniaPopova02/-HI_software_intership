@@ -300,7 +300,7 @@ body {
 }
 
 .search {
-  padding-top: 213px;
+  margin-top: 213px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -575,6 +575,9 @@ body {
   .articles__wrapper {
     margin: 0 20px;
   }
+  .search__wrapper {
+    margin: 0 20px;
+  }
 }
 @media (max-width: 1200px) {
   .articles__wrapper {
@@ -600,6 +603,24 @@ body {
   .editor__article-image {
     margin-right: 0;
   }
+  .search {
+    margin-top: 50px;
+  }
+  .search__tags {
+    flex-direction: row;
+  }
+  .search__tags-rows {
+    flex-direction: column;
+  }
+  .search__tags-rows + .search__tags-rows {
+    margin-left: 20px;
+  }
+  .search__tags-item + .search__tags-item {
+    margin-top: 20px;
+  }
+  .search__tags-wrapper {
+    padding-top: 0;
+  }
 }
 @media (max-width: 830px) {
   .articles__article {
@@ -614,6 +635,9 @@ body {
   }
   .articles__text {
     width: auto;
+  }
+  .search__input {
+    width: 437px;
   }
 }
 @media (max-width: 700px) {
@@ -639,6 +663,21 @@ body {
   .top__article-text {
     font-size: 24px;
     line-height: 40px;
+  }
+  .search__tags {
+    flex-direction: column;
+  }
+  .search__tags-rows + .search__tags-rows {
+    margin-left: 0;
+  }
+  .search__tags-wrapper {
+    margin-top: 20px;
+  }
+  .search__tags-item + .search__tags-item {
+    margin: 20px 0 0 0;
+  }
+  .search__wrapper {
+    margin-bottom: 20px;
   }
   .interior__background {
     display: none;
