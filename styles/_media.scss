@@ -60,6 +60,14 @@
       }
     }
   }
+  .article {
+    &__wrapper {
+      margin: 0 20px;
+    }
+    &__title {
+      width: auto;
+    }
+  }
 }
 
 @media (max-width: 1200px) {
@@ -76,6 +84,11 @@
     }
     &__column {
       margin-bottom: 65px;
+    }
+  }
+  .arrows {
+    &__text {
+      display: none;
     }
   }
 }
@@ -170,6 +183,20 @@
         img {
           display: none;
         }
+      }
+    }
+  }
+  .article {
+    &__text {
+      width: auto;
+    }
+    &__author {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      width: auto;
+      &-text {
+        width: 300px;
       }
     }
   }
