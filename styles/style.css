@@ -88,7 +88,7 @@ body {
 }
 
 .header {
-  padding-top: 31px;
+  margin-top: 31px;
 }
 .header__nav {
   display: flex;
@@ -123,12 +123,14 @@ body {
   font-size: 20px;
   line-height: 27px;
   color: rgba(28, 28, 28, 0.5);
+  text-transform: uppercase;
 }
 
 .title {
   font-size: 33px;
   line-height: 41px;
   margin-bottom: 12px;
+  text-transform: uppercase;
 }
 
 .info {
@@ -154,7 +156,6 @@ body {
   top: 0;
   left: 45px;
   max-width: 509px;
-  display: inline-block;
   padding: 80px 40px;
 }
 
@@ -184,7 +185,7 @@ body {
   display: flex;
 }
 .editor__article + .editor__article {
-  padding-top: 63px;
+  margin-top: 63px;
 }
 .editor__image {
   width: 371px;
@@ -200,10 +201,10 @@ body {
   max-width: 430px;
 }
 
-.interior {
+.middle {
   margin-bottom: 104px;
 }
-.interior__article {
+.middle__article {
   background-color: #fff;
   padding: 96px 40px;
   max-width: 509px;
@@ -212,7 +213,7 @@ body {
   right: -190px;
   transform: translate(-50%, -50%);
 }
-.interior__background {
+.middle__background {
   background-image: url("/images/interior_mage.jpg");
   height: 592px;
 }
@@ -228,18 +229,18 @@ body {
   display: flex;
 }
 .articles__article + .articles__article {
-  padding-top: 66px;
+  margin-top: 66px;
 }
 .articles__img {
-  padding-right: 37px;
+  margin-right: 37px;
 }
 .articles__text {
   width: 538px;
 }
 .articles__tags-specific + .articles__tags-specific {
-  padding-top: 25px;
+  margin-top: 25px;
 }
-.articles__context {
+.articles__content {
   width: 812px;
 }
 
@@ -256,7 +257,6 @@ body {
   border: none;
   cursor: pointer;
   display: flex;
-  padding: 0;
 }
 
 .line {
@@ -323,7 +323,7 @@ body {
   background-color: transparent;
 }
 .search__tags-wrapper {
-  padding-top: 59px;
+  margin-top: 59px;
 }
 .search__tags {
   display: flex;
@@ -336,7 +336,7 @@ body {
   justify-content: center;
 }
 .search__tags-rows + .search__tags-rows {
-  padding-top: 25px;
+  margin-top: 25px;
 }
 .search__tags-item {
   border: 1px solid #000;
@@ -355,12 +355,6 @@ body {
   text-align: center;
   font-size: 42px;
   line-height: 52px;
-}
-.company__name-letters {
-  background-color: #000;
-  color: #fff;
-  padding-top: 17px;
-  padding-left: 17px;
 }
 .company__slogan {
   text-align: center;
@@ -392,6 +386,7 @@ body {
   margin: 172px 60px 52px 96px;
 }
 .about__firstArticle-title {
+  text-transform: uppercase;
   width: 444px;
 }
 .about__firstArticle-text {
@@ -412,6 +407,7 @@ body {
   margin-left: 30px;
 }
 .about__secondArticle-title {
+  text-transform: uppercase;
   width: 400px;
 }
 .about__secondArticle-text {
@@ -440,6 +436,7 @@ body {
   margin: 0 398px 76px 298px;
 }
 .about__thirdArticle-title {
+  text-transform: uppercase;
   width: 612px;
 }
 .about__thirdArticle-text {
@@ -450,7 +447,7 @@ body {
   justify-content: end;
 }
 .about__thirdArticle-image img + img {
-  padding-left: 20px;
+  margin-left: 20px;
 }
 .about__thirdArticle-image img {
   width: 350px;
@@ -595,7 +592,7 @@ body {
   .top__wrapper {
     margin: 0 20px;
   }
-  .interior__wrapper {
+  .middle__wrapper {
     margin: 0 20px;
   }
   .articles__wrapper {
@@ -698,7 +695,7 @@ body {
   .articles__img {
     padding-right: 0;
   }
-  .articles__context {
+  .articles__content {
     width: auto;
   }
   .articles__text {
@@ -769,16 +766,16 @@ body {
   .search__wrapper {
     margin-bottom: 20px;
   }
-  .interior__background {
+  .middle__background {
     display: none;
   }
-  .interior__article {
+  .middle__article {
     position: static;
     transform: none;
     padding: 0;
     text-align: center;
   }
-  .interior__article-text {
+  .middle__article-text {
     font-size: 24px;
     line-height: 40px;
   }
