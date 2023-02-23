@@ -274,7 +274,8 @@
 }
 
 .company {
-  padding-top: 234px;
+  margin-top: 234px;
+  margin-bottom: 196px;
   &__name {
     text-align: center;
     @extend %lb-bold;
@@ -298,11 +299,13 @@
 }
 
 .about {
+  margin-bottom: 226px;
   background-color: #1c1c1c;
-  margin-top: 196px;
+  margin-bottom: 226px;
   color: #fff;
   position: relative;
   z-index: -5;
+
   &__firstArticle {
     &::after {
       content: "";
@@ -315,7 +318,7 @@
       z-index: -1;
     }
   }
-  &__firstArticle-context {
+  &__firstArticle-content {
     margin: 172px 60px 52px 96px;
   }
   &__firstArticle-title {
@@ -326,16 +329,16 @@
   }
   &__firstArticle-image {
     margin: 146px 86px 0 0;
+    img {
+      width: 569px;
+      height: 419px;
+    }
   }
   &__secondArticle {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    top: 461px;
     flex-direction: column;
-    margin: 0 361px 465px 327px;
+    margin: -95px 361px 0px 327px;
   }
-  &__secondArticle-context {
+  &__secondArticle-content {
     margin-left: 30px;
   }
   &__secondArticle-title {
@@ -344,8 +347,15 @@
   &__secondArticle-text {
     width: 524px;
   }
+  &__secondArticle-image {
+    img {
+      width: 557px;
+      height: 391px;
+    }
+  }
+
   &__thirdArticle {
-    margin-top: 752px;
+    margin-top: 202px;
     flex-direction: column;
     &::before {
       content: "";
@@ -355,10 +365,11 @@
       width: 8px;
       left: 221px;
       bottom: 0;
+      z-index: -4;
       border-radius: 0px;
     }
   }
-  &__thirdArticle-context {
+  &__thirdArticle-content {
     margin: 0 398px 76px 298px;
   }
   &__thirdArticle-title {
@@ -372,6 +383,13 @@
     justify-content: end;
     img + img {
       padding-left: 20px;
+    }
+    img {
+      width: 350px;
+      height: 350px;
+      &:last-child {
+        width: 270px;
+      }
     }
   }
 }
@@ -387,8 +405,7 @@
 }
 
 .reason {
-  padding-top: 226px;
-  padding-bottom: 237px;
+  margin-bottom: 237px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -421,7 +438,16 @@
   }
   &__text {
     width: 332px;
-    margin: 0 auto 150px auto;
+    margin: 0 auto;
+  }
+  &__socials {
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+    a + a {
+      margin-left: 15px;
+    }
+    margin-bottom: 150px;
   }
 }
 

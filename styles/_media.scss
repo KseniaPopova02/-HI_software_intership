@@ -24,6 +24,42 @@
       margin: 0 20px;
     }
   }
+  .about {
+    &__wrapper {
+      margin: 0 20px;
+      padding: 20px 0;
+    }
+    &__firstArticle {
+      flex-direction: column;
+      margin: 20px;
+      &-content {
+        margin: 24px 0px 0px 10px;
+      }
+      &-image {
+        margin-top: 32px;
+      }
+      &::after {
+        display: none;
+      }
+    }
+    &__secondArticle {
+      margin: 20px;
+    }
+    &__thirdArticle {
+      flex-direction: row;
+
+      margin: 20px;
+      &::before {
+        display: none;
+      }
+      &-content {
+        margin: 20px;
+      }
+      &-image {
+        display: none;
+      }
+    }
+  }
 }
 
 @media (max-width: 1200px) {
@@ -115,6 +151,28 @@
   .burger__menu {
     display: block;
   }
+  .about {
+    &__firstArticle,
+    &__secondArticle,
+    &__thirdArticle {
+      margin-top: 20px;
+      display: block;
+    }
+    &__thirdArticle {
+      &-title {
+        width: 460px;
+      }
+    }
+
+    &__firstArticle,
+    &__secondArticle {
+      &-image {
+        img {
+          display: none;
+        }
+      }
+    }
+  }
 }
 
 @media (max-width: 600px) {
@@ -169,7 +227,55 @@
       }
     }
   }
+
+  .about {
+    &__firstArticle,
+    &__secondArticle,
+    &__thirdArticle {
+      &-text {
+        width: auto;
+      }
+      &-title {
+        width: auto;
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .reason {
+    &__one {
+      font-size: 32px;
+      width: auto;
+    }
+    &__two {
+      width: auto;
+    }
+  }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 400px) {
+  .company {
+    &__wrapper {
+      margin: 0 20px;
+    }
+  }
+  .about {
+    &__firstArticle,
+    &__secondArticle,
+    &__thirdArticle {
+      &-title {
+        width: auto;
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+  }
+  .connection {
+    &__question {
+      width: auto;
+    }
+    &__text {
+      width: auto;
+    }
+  }
 }

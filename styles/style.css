@@ -348,7 +348,8 @@ body {
 }
 
 .company {
-  padding-top: 234px;
+  margin-top: 234px;
+  margin-bottom: 196px;
 }
 .company__name {
   text-align: center;
@@ -370,8 +371,9 @@ body {
 }
 
 .about {
+  margin-bottom: 226px;
   background-color: #1c1c1c;
-  margin-top: 196px;
+  margin-bottom: 226px;
   color: #fff;
   position: relative;
   z-index: -5;
@@ -386,7 +388,7 @@ body {
   position: absolute;
   z-index: -1;
 }
-.about__firstArticle-context {
+.about__firstArticle-content {
   margin: 172px 60px 52px 96px;
 }
 .about__firstArticle-title {
@@ -398,15 +400,15 @@ body {
 .about__firstArticle-image {
   margin: 146px 86px 0 0;
 }
-.about__secondArticle {
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  top: 461px;
-  flex-direction: column;
-  margin: 0 361px 465px 327px;
+.about__firstArticle-image img {
+  width: 569px;
+  height: 419px;
 }
-.about__secondArticle-context {
+.about__secondArticle {
+  flex-direction: column;
+  margin: -95px 361px 0px 327px;
+}
+.about__secondArticle-content {
   margin-left: 30px;
 }
 .about__secondArticle-title {
@@ -415,8 +417,12 @@ body {
 .about__secondArticle-text {
   width: 524px;
 }
+.about__secondArticle-image img {
+  width: 557px;
+  height: 391px;
+}
 .about__thirdArticle {
-  margin-top: 752px;
+  margin-top: 202px;
   flex-direction: column;
 }
 .about__thirdArticle::before {
@@ -427,9 +433,10 @@ body {
   width: 8px;
   left: 221px;
   bottom: 0;
+  z-index: -4;
   border-radius: 0px;
 }
-.about__thirdArticle-context {
+.about__thirdArticle-content {
   margin: 0 398px 76px 298px;
 }
 .about__thirdArticle-title {
@@ -445,6 +452,13 @@ body {
 .about__thirdArticle-image img + img {
   padding-left: 20px;
 }
+.about__thirdArticle-image img {
+  width: 350px;
+  height: 350px;
+}
+.about__thirdArticle-image img:last-child {
+  width: 270px;
+}
 
 .about_article {
   display: flex;
@@ -457,8 +471,7 @@ body {
 }
 
 .reason {
-  padding-top: 226px;
-  padding-bottom: 237px;
+  margin-bottom: 237px;
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -490,7 +503,16 @@ body {
 }
 .connection__text {
   width: 332px;
-  margin: 0 auto 150px auto;
+  margin: 0 auto;
+}
+.connection__socials {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+  margin-bottom: 150px;
+}
+.connection__socials a + a {
+  margin-left: 15px;
 }
 
 .article {
@@ -578,6 +600,39 @@ body {
   .search__wrapper {
     margin: 0 20px;
   }
+  .about__wrapper {
+    margin: 0 20px;
+    padding: 20px 0;
+  }
+  .about__firstArticle {
+    flex-direction: column;
+    margin: 20px;
+  }
+  .about__firstArticle-content {
+    margin: 24px 0px 0px 10px;
+  }
+  .about__firstArticle-image {
+    margin-top: 32px;
+  }
+  .about__firstArticle::after {
+    display: none;
+  }
+  .about__secondArticle {
+    margin: 20px;
+  }
+  .about__thirdArticle {
+    flex-direction: row;
+    margin: 20px;
+  }
+  .about__thirdArticle::before {
+    display: none;
+  }
+  .about__thirdArticle-content {
+    margin: 20px;
+  }
+  .about__thirdArticle-image {
+    display: none;
+  }
 }
 @media (max-width: 1200px) {
   .articles__wrapper {
@@ -650,6 +705,16 @@ body {
   .burger__menu {
     display: block;
   }
+  .about__firstArticle, .about__secondArticle, .about__thirdArticle {
+    margin-top: 20px;
+    display: block;
+  }
+  .about__thirdArticle-title {
+    width: 460px;
+  }
+  .about__firstArticle-image img, .about__secondArticle-image img {
+    display: none;
+  }
 }
 @media (max-width: 600px) {
   .top__background {
@@ -691,5 +756,36 @@ body {
   .interior__article-text {
     font-size: 24px;
     line-height: 40px;
+  }
+  .about__firstArticle-text, .about__secondArticle-text, .about__thirdArticle-text {
+    width: auto;
+  }
+  .about__firstArticle-title, .about__secondArticle-title, .about__thirdArticle-title {
+    width: auto;
+  }
+}
+@media (max-width: 500px) {
+  .reason__one {
+    font-size: 32px;
+    width: auto;
+  }
+  .reason__two {
+    width: auto;
+  }
+}
+@media (max-width: 400px) {
+  .company__wrapper {
+    margin: 0 20px;
+  }
+  .about__firstArticle-title, .about__secondArticle-title, .about__thirdArticle-title {
+    width: auto;
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .connection__question {
+    width: auto;
+  }
+  .connection__text {
+    width: auto;
   }
 }/*# sourceMappingURL=style.css.map */
