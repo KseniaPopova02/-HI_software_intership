@@ -125,6 +125,9 @@
       }
     }
   }
+  .header__input {
+    width: 200px;
+  }
 }
 
 @media (max-width: 830px) {
@@ -147,6 +150,9 @@
     &__input {
       width: 437px;
     }
+  }
+  .header__input {
+    width: 100px;
   }
 }
 
@@ -304,5 +310,8 @@
     &__text {
       width: auto;
     }
+  }
+  .burger__input2 {
+    width: 200px;
   }
 }

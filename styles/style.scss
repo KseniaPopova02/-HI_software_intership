@@ -5,6 +5,14 @@
 // Home page
 .header {
   margin-top: 31px;
+  &__input {
+    display: none;
+    border: 2px solid #1c1c1c;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 20px;
+    width: 363px;
+  }
   &__nav {
     display: flex;
     justify-content: space-between;
@@ -21,7 +29,9 @@
     display: flex;
   }
   &__button-magnifier {
-    margin-right: 21px;
+    position: absolute;
+    right: 150px;
+    top: 15px;
     background-color: transparent;
   }
   &__button-login {
@@ -228,6 +238,7 @@
   &__nav {
     padding: 20px;
     &-wrapper {
+      height: 250px;
       display: none;
       position: absolute;
       top: 70px;
@@ -250,10 +261,17 @@
       padding: 8px 30px;
     }
     &-magnifier {
-      margin-left: 21px;
+      position: absolute;
+      top: 170px;
       background-color: #fff;
       border-radius: 10px;
     }
+  }
+  &__input2 {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
   }
 }
 
