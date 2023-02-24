@@ -5,16 +5,6 @@
 // Home page
 .header {
   margin-top: 31px;
-  &__input {
-    border: 2px solid #1c1c1c;
-    border-radius: 10px;
-    padding: 10px;
-    margin-right: 20px;
-    display: none;
-    &-wrapper {
-      position: relative;
-    }
-  }
   &__nav {
     display: flex;
     justify-content: space-between;
@@ -31,10 +21,8 @@
     display: flex;
   }
   &__button-magnifier {
+    margin-right: 21px;
     background-color: transparent;
-    position: absolute;
-    right: 30px;
-    top: 5px;
   }
   &__button-login {
     background-color: transparent;
@@ -114,6 +102,7 @@
       width: 190px;
       left: 50%;
       transform: translate(-50%, -50%);
+
       margin-top: 14px;
       position: absolute;
     }
@@ -191,7 +180,9 @@
 }
 
 //burger menu
-
+.burger__menu {
+  display: none;
+}
 .burger__button {
   background-color: transparent;
   border: none;
@@ -238,7 +229,6 @@
     padding: 20px;
     &-wrapper {
       display: none;
-      transition: 1s ease max-height;
       position: absolute;
       top: 70px;
       width: 100%;
