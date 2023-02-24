@@ -37,7 +37,7 @@
               </ul>
             </nav>
           </div>
-          <div class="button__wrapper" onclick="toggleNav()">
+          <div class="button__wrapper">
             <button
               class="burger__button"
               onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
@@ -80,9 +80,17 @@
           </div>
 
           <div class="header__button">
-            <button class="header__button-magnifier">
-              <img src="../images/search.png" alt="search button" />
-            </button>
+            <div class="header__input-wrapper">
+              <input id="headerInput" type="text" class="header__input" />
+              <button
+                onclick="toggleNav"
+                id="magnifier"
+                class="header__button-magnifier"
+              >
+                <img src="../images/search.png" alt="search button" />
+              </button>
+            </div>
+
             <button class="header__button-login">Login</button>
           </div>
         </div>
@@ -340,6 +348,6 @@
         </div>
       </div>
     </section>
-    <script src="main.js"></script>
+    <script src="nav.js"></script>
   </body>
 </html>

@@ -90,6 +90,16 @@ body {
 .header {
   margin-top: 31px;
 }
+.header__input {
+  border: 2px solid #1c1c1c;
+  border-radius: 10px;
+  padding: 10px;
+  margin-right: 20px;
+  display: none;
+}
+.header__input-wrapper {
+  position: relative;
+}
 .header__nav {
   display: flex;
   justify-content: space-between;
@@ -105,8 +115,10 @@ body {
   display: flex;
 }
 .header__button-magnifier {
-  margin-right: 21px;
   background-color: transparent;
+  position: absolute;
+  right: 30px;
+  top: 5px;
 }
 .header__button-login {
   background-color: transparent;
@@ -249,10 +261,6 @@ body {
   font-size: 20px;
 }
 
-.burger__menu {
-  display: none;
-}
-
 .burger__button {
   background-color: transparent;
   border: none;
@@ -305,6 +313,7 @@ body {
 }
 .burger__nav-wrapper {
   display: none;
+  transition: 1s ease max-height;
   position: absolute;
   top: 70px;
   width: 100%;
@@ -720,6 +729,17 @@ body {
   }
   .search__tags-wrapper {
     padding-top: 0;
+  }
+  .header__input {
+    width: 163px;
+  }
+}
+@media (max-width: 790px) {
+  .header__input {
+    margin-right: 0;
+    position: absolute;
+    top: 38px;
+    right: 25px;
   }
 }
 @media (max-width: 830px) {

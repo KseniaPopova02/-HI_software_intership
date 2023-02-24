@@ -125,6 +125,17 @@
       }
     }
   }
+  .header__input {
+    width: 163px;
+  }
+}
+@media (max-width: 790px) {
+  .header__input {
+    margin-right: 0;
+    position: absolute;
+    top: 38px;
+    right: 25px;
+  }
 }
 
 @media (max-width: 830px) {
