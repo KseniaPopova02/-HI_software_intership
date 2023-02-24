@@ -95,6 +95,7 @@ body {
   justify-content: space-between;
   align-items: center;
   font-size: 20px;
+  position: relative;
 }
 .header__nav-wrapper {
   display: flex;
@@ -297,6 +298,40 @@ body {
   stroke-dasharray: 90 207;
   stroke-dashoffset: -134;
   stroke-width: 6;
+}
+
+.burger__nav {
+  padding: 20px;
+}
+.burger__nav-wrapper {
+  display: none;
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+}
+.burger__input {
+  padding: 0 20px 20px 20px;
+}
+.burger__button {
+  display: none;
+}
+.burger__button-login {
+  background-color: #fff;
+  border: solid #000 2px;
+  border-radius: 10px;
+  padding: 8px 30px;
+}
+.burger__button-magnifier {
+  margin-left: 21px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.show {
+  display: block;
 }
 
 .search {
@@ -712,7 +747,7 @@ body {
   .menu__list {
     display: none;
   }
-  .burger__menu {
+  .burger__button {
     display: block;
   }
   .about__firstArticle, .about__secondArticle, .about__thirdArticle {
