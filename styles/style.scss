@@ -4,13 +4,22 @@
 
 // Home page
 .header {
-  padding-top: 31px;
+  margin-top: 31px;
+  &__input {
+    display: none;
+    border: 2px solid #1c1c1c;
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 20px;
+    width: 363px;
+  }
   &__nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     @extend %lb-regular;
     font-size: 20px;
+    position: relative;
   }
   &__nav-wrapper {
     display: flex;
@@ -20,7 +29,9 @@
     display: flex;
   }
   &__button-magnifier {
-    margin-right: 21px;
+    position: absolute;
+    right: 150px;
+    top: 15px;
     background-color: transparent;
   }
   &__button-login {
@@ -46,12 +57,14 @@
   font-size: 20px;
   line-height: 27px;
   color: rgba(28, 28, 28, 0.5);
+  text-transform: uppercase;
 }
 
 .title {
   font-size: 33px;
   line-height: 41px;
   margin-bottom: 12px;
+  text-transform: uppercase;
   @extend %lb-bold;
 }
 
@@ -77,7 +90,6 @@
     top: 0;
     left: 45px;
     max-width: 509px;
-    display: inline-block;
     padding: 80px 40px;
   }
 }
@@ -108,7 +120,7 @@
   &__article {
     display: flex;
     & + & {
-      padding-top: 63px;
+      margin-top: 63px;
     }
   }
   &__image {
@@ -127,7 +139,7 @@
   }
 }
 
-.interior {
+.middle {
   margin-bottom: 104px;
   &__article {
     background-color: #fff;
@@ -145,7 +157,7 @@
 }
 
 .articles {
-  padding-bottom: 70px;
+  padding-bottom: 70px; //???
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -153,21 +165,21 @@
   &__article {
     display: flex;
     & + & {
-      padding-top: 66px;
+      margin-top: 66px;
     }
   }
   &__img {
-    padding-right: 37px;
+    margin-right: 37px;
   }
   &__text {
     width: 538px;
   }
   &__tags-specific {
     & + & {
-      padding-top: 25px;
+      margin-top: 25px;
     }
   }
-  &__context {
+  &__content {
     width: 812px;
   }
 }
@@ -186,7 +198,6 @@
   border: none;
   cursor: pointer;
   display: flex;
-  padding: 0;
 }
 .line {
   fill: none;
@@ -223,6 +234,51 @@
   stroke-width: 6;
 }
 
+.burger {
+  &__nav {
+    padding: 20px;
+    &-wrapper {
+      height: 250px;
+      display: none;
+      position: absolute;
+      top: 70px;
+      width: 100%;
+      z-index: 10;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: #fff;
+    }
+  }
+  &__input {
+    padding: 0 20px 20px 20px;
+  }
+
+  &__button {
+    display: none;
+    &-login {
+      background-color: #fff;
+      border: solid #000 2px;
+      border-radius: 10px;
+      padding: 8px 30px;
+    }
+    &-magnifier {
+      position: absolute;
+      top: 170px;
+      background-color: #fff;
+      border-radius: 10px;
+    }
+  }
+  &__input2 {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;
+  }
+}
+
+.show {
+  display: block;
+}
+
 // Tags page
 
 .search {
@@ -248,7 +304,7 @@
     background-color: transparent;
   }
   &__tags-wrapper {
-    padding-top: 59px;
+    margin-top: 59px;
   }
   &__tags {
     display: flex;
@@ -260,7 +316,7 @@
     display: flex;
     justify-content: center;
     & + & {
-      padding-top: 25px;
+      margin-top: 25px;
     }
   }
   &__tags-item {
@@ -273,6 +329,10 @@
   }
 }
 
+.hide {
+  display: none;
+}
+
 .company {
   margin-top: 234px;
   margin-bottom: 196px;
@@ -282,12 +342,7 @@
     font-size: 42px;
     line-height: 52px;
   }
-  &__name-letters {
-    background-color: #000;
-    color: #fff;
-    padding-top: 17px;
-    padding-left: 17px;
-  }
+
   &__slogan {
     text-align: center;
     @extend %lb-regular;
@@ -322,6 +377,7 @@
     margin: 172px 60px 52px 96px;
   }
   &__firstArticle-title {
+    text-transform: uppercase;
     width: 444px;
   }
   &__firstArticle-text {
@@ -342,6 +398,7 @@
     margin-left: 30px;
   }
   &__secondArticle-title {
+    text-transform: uppercase;
     width: 400px;
   }
   &__secondArticle-text {
@@ -373,6 +430,7 @@
     margin: 0 398px 76px 298px;
   }
   &__thirdArticle-title {
+    text-transform: uppercase;
     width: 612px;
   }
   &__thirdArticle-text {
@@ -382,7 +440,7 @@
     display: flex;
     justify-content: end;
     img + img {
-      padding-left: 20px;
+      margin-left: 20px;
     }
     img {
       width: 350px;
@@ -429,7 +487,7 @@
   text-align: center;
   flex-direction: column;
   &__question {
-    padding-top: 119px;
+    padding-top: 119px; //???
     @extend %lb-regular;
     font-size: 33px;
     line-height: 40px;
