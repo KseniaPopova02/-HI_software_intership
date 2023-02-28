@@ -14,8 +14,9 @@
         <div class="header__nav">
           <div class="header__nav-wrapper">
             <div class="logo">
-              <img src="images/Logo.png" alt="" />
+              <img src="images/Logo.png" alt="logo" />
             </div>
+
             <nav class="menu">
               <ul class="menu__list">
                 <li class="menu__list-item">
@@ -37,6 +38,45 @@
             </nav>
           </div>
 
+          <div class="burger__menu">
+            <button
+              class="burger__button"
+              onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+              aria-label="Main Menu"
+            >
+              <svg width="50" height="50" viewBox="0 0 100 100">
+                <path
+                  class="line line1"
+                  d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
+                />
+                <path class="line line2" d="M 20,50 H 80" />
+                <path
+                  class="line line3"
+                  d="M 20,70.999954 H 80.000231 C 80.000231,70.999954 94.498839,71.182648 94.532987,33.288669 94.543142,22.019327 90.966081,18.329754 85.259173,18.331003 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25.000021,74.999942"
+                />
+              </svg>
+            </button>
+            <!-- <nav class="menu">
+              <ul class="menu__list">
+                <li class="menu__list-item">
+                  <a href="index.html" class="menu__list-link menu__list-active"
+                    >Home</a
+                  >
+                </li>
+                <li class="menu__list-item">
+                  <a href="tags.html" class="menu__list-link menu__list-active"
+                    >Tags</a
+                  >
+                </li>
+                <li class="menu__list-item">
+                  <a href="about.html" class="menu__list-link menu__list-active"
+                    >About</a
+                  >
+                </li>
+              </ul>
+            </nav> -->
+          </div>
+
           <div class="header__button">
             <button class="header__button-magnifier">
               <img src="../images/search.png" alt="" />
@@ -48,70 +88,68 @@
     </header>
     <section class="article">
       <div class="container">
-        <div class="article__img">
-          <img src="../images/article_image.jpg" alt="" />
-        </div>
-        <div class="article__content">
-          <h1 class="article__title title">
-            The World’s Most Dangerous Technology Ever Made.
-          </h1>
-          <div class="article__info info">
-            Ralph Hawkins ● May 7, 2019 (10 mins read)
-          </div>
-          <div class="article__tags info">#technology #tech #career</div>
-          <article class="article__text text">
-            <p class="article__text-p">
-              Commodo labore ut nisi laborum amet eu qui magna ullamco ut
-              labore. Aliquip consectetur labore consectetur dolor exercitation
-              est minim quis. Magna non irure qui ex est laborum nulla excepteur
-              qui. Anim Lorem dolore cupidatat pariatur ex tempor. Duis ea
-              excepteur proident ex commodo irure est.
-            </p>
-
-            <p class="article__text-p">
-              Nisi commodo qui pariatur enim sint laborum consequat enim in
-              officia. Officia fugiat incididunt commodo et mollit aliqua non
-              aute. Enim dolor eiusmod aliqua amet ipsum in enim eiusmod. Quis
-              exercitation sit velit duis.
-            </p>
-
-            <p class="article__text-p">
-              Nisi commodo qui pariatur enim sint laborum consequat enim in
-              officia. Officia fugiat incididunt commodo et mollit aliqua non
-              aute. Enim dolor eiusmod aliqua amet ipsum in enim eiusmod. Quis
-              exercitation sit velit duis.
-            </p>
-
-            <p class="article__text-p">
-              Est Lorem labore consectetur minim sit eu eiusmod mollit velit.
-              Consectetur voluptate ex amet id eiusmod laborum irure. Aliquip ad
-              qui id exercitation irure amet commodo nisi quis. Occaecat minim
-              incididunt eiusmod nostrud veniam quis culpa. Nisi ipsum et
-              consequat id deserunt excepteur. Cillum non pariatur culpa ut
-              occaecat laboris eu. Ullamco ad Lorem et elit laboris eu qui irure
-              nulla qui culpa et. Cupidatat sunt ipsum proident aute
-              exercitation do tempor aliqua cupidatat quis non exercitation.
-              Adipisicing do minim dolore nulla mollit. Adipisicing incididunt
-              irure ipsum et in esse ipsum elit tempor.
-            </p>
-          </article>
-        </div>
-        <div class="article__author">
-          <div class="article__author-column1">
-            <div class="article__author-about">ABOUT THE AUTHOR</div>
-            <div class="article__author-avatar">
-              <img src="../images/author_avatar.jpg" alt="" />
+        <div class="article__wrapper">
+          <div class="article__img"></div>
+          <div class="article__content">
+            <h1 class="article__title title">
+              The World’s Most Dangerous Technology Ever Made.
+            </h1>
+            <div class="article__info info">
+              Ralph Hawkins ● May 7, 2019 (10 mins read)
             </div>
+            <div class="article__tags info">#technology #tech #career</div>
+            <article class="article__text text">
+              <p class="article__text-p">
+                Commodo labore ut nisi laborum amet eu qui magna ullamco ut
+                labore. Aliquip consectetur labore consectetur dolor
+                exercitation est minim quis. Magna non irure qui ex est laborum
+                nulla excepteur qui. Anim Lorem dolore cupidatat pariatur ex
+                tempor. Duis ea excepteur proident ex commodo irure est.
+              </p>
+
+              <p class="article__text-p">
+                Nisi commodo qui pariatur enim sint laborum consequat enim in
+                officia. Officia fugiat incididunt commodo et mollit aliqua non
+                aute. Enim dolor eiusmod aliqua amet ipsum in enim eiusmod. Quis
+                exercitation sit velit duis.
+              </p>
+
+              <p class="article__text-p">
+                Nisi commodo qui pariatur enim sint laborum consequat enim in
+                officia. Officia fugiat incididunt commodo et mollit aliqua non
+                aute. Enim dolor eiusmod aliqua amet ipsum in enim eiusmod. Quis
+                exercitation sit velit duis.
+              </p>
+
+              <p class="article__text-p">
+                Est Lorem labore consectetur minim sit eu eiusmod mollit velit.
+                Consectetur voluptate ex amet id eiusmod laborum irure. Aliquip
+                ad qui id exercitation irure amet commodo nisi quis. Occaecat
+                minim incididunt eiusmod nostrud veniam quis culpa. Nisi ipsum
+                et consequat id deserunt excepteur. Cillum non pariatur culpa ut
+                occaecat laboris eu. Ullamco ad Lorem et elit laboris eu qui
+                irure nulla qui culpa et. Cupidatat sunt ipsum proident aute
+                exercitation do tempor aliqua cupidatat quis non exercitation.
+                Adipisicing do minim dolore nulla mollit. Adipisicing incididunt
+                irure ipsum et in esse ipsum elit tempor.
+              </p>
+            </article>
           </div>
-          <div class="article__author-column2">
-            <div class="article__author-name">Arthur Black</div>
-            <div class="article__author-info info">@arthurblack</div>
-            <div class="article__author-text text">
-              <p>
+          <div class="article__author">
+            <div class="article__author-column1">
+              <div class="article__author-about">ABOUT THE AUTHOR</div>
+              <div class="article__author-avatar">
+                <img src="../images/author_avatar.jpg" alt="" />
+              </div>
+            </div>
+            <div class="article__author-column2">
+              <div class="article__author-name">Arthur Black</div>
+              <div class="article__author-info info">@arthurblack</div>
+              <div class="article__author-text text">
                 Ipsum adipisicing culpa est nisi consequat ex amet magna culpa
                 veniam tempor irure ea. Reprehenderit labore do tempor eiusmod
                 in consectetur ex sunt id mollit commodo ipsum deserunt quis.
-              </p>
+              </div>
             </div>
           </div>
         </div>

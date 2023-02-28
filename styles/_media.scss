@@ -1,0 +1,308 @@
+@media (max-width: 1350px) {
+  .header {
+    &__nav {
+      margin: 0 20px;
+    }
+  }
+  .top {
+    &__wrapper {
+      margin: 0 20px;
+    }
+  }
+  .interior {
+    &__wrapper {
+      margin: 0 20px;
+    }
+  }
+  .articles {
+    &__wrapper {
+      margin: 0 20px;
+    }
+  }
+  .search {
+    &__wrapper {
+      margin: 0 20px;
+    }
+  }
+  .about {
+    &__wrapper {
+      margin: 0 20px;
+      padding: 20px 0;
+    }
+    &__firstArticle {
+      flex-direction: column;
+      margin: 20px;
+      &-content {
+        margin: 24px 0px 0px 10px;
+      }
+      &-image {
+        margin-top: 32px;
+      }
+      &::after {
+        display: none;
+      }
+    }
+    &__secondArticle {
+      margin: 20px;
+    }
+    &__thirdArticle {
+      flex-direction: row;
+
+      margin: 20px;
+      &::before {
+        display: none;
+      }
+      &-content {
+        margin: 20px;
+      }
+      &-image {
+        display: none;
+      }
+    }
+  }
+  .article {
+    &__wrapper {
+      margin: 0 20px;
+    }
+    &__title {
+      width: auto;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .articles {
+    &__wrapper {
+      display: block;
+    }
+    &__tags {
+      display: flex;
+      justify-content: center;
+      &-columns + &-columns {
+        margin-left: 15px;
+      }
+    }
+    &__column {
+      margin-bottom: 65px;
+    }
+  }
+  .arrows {
+    &__text {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 970px) {
+  .editor {
+    &__article {
+      display: block;
+      margin: 0 17px;
+      text-align: center;
+      &-image {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .search {
+    margin-top: 50px;
+    &__tags {
+      flex-direction: row;
+      &-rows {
+        flex-direction: column;
+        & + & {
+          margin-left: 20px;
+        }
+      }
+      &-item {
+        & + & {
+          margin-top: 20px;
+        }
+      }
+      &-wrapper {
+        padding-top: 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 830px) {
+  .articles {
+    &__article {
+      display: block;
+      text-align: center;
+    }
+    &__img {
+      padding-right: 0;
+    }
+    &__context {
+      width: auto;
+    }
+    &__text {
+      width: auto;
+    }
+  }
+  .search {
+    &__input {
+      width: 437px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .header {
+    &__button {
+      display: none;
+    }
+  }
+  .menu {
+    &__list {
+      display: none;
+    }
+  }
+  .burger__menu {
+    display: block;
+  }
+  .about {
+    &__firstArticle,
+    &__secondArticle,
+    &__thirdArticle {
+      margin-top: 20px;
+      display: block;
+    }
+    &__thirdArticle {
+      &-title {
+        width: 460px;
+      }
+    }
+
+    &__firstArticle,
+    &__secondArticle {
+      &-image {
+        img {
+          display: none;
+        }
+      }
+    }
+  }
+  .article {
+    &__text {
+      width: auto;
+    }
+    &__author {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+      width: auto;
+      &-text {
+        width: 300px;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .top {
+    &__background {
+      display: none;
+    }
+    &__article {
+      position: static;
+      padding: 0;
+      text-align: center;
+      &-text {
+        font-size: 24px;
+        line-height: 40px;
+      }
+    }
+  }
+  .search {
+    &__tags {
+      flex-direction: column;
+      &-rows {
+        & + & {
+          margin-left: 0;
+        }
+      }
+      &-wrapper {
+        margin-top: 20px;
+      }
+      &-item {
+        & + & {
+          margin: 20px 0 0 0;
+        }
+      }
+    }
+    &__wrapper {
+      margin-bottom: 20px;
+    }
+  }
+
+  .interior {
+    &__background {
+      display: none;
+    }
+    &__article {
+      position: static;
+      transform: none;
+      padding: 0;
+      text-align: center;
+      &-text {
+        font-size: 24px;
+        line-height: 40px;
+      }
+    }
+  }
+
+  .about {
+    &__firstArticle,
+    &__secondArticle,
+    &__thirdArticle {
+      &-text {
+        width: auto;
+      }
+      &-title {
+        width: auto;
+      }
+    }
+  }
+}
+@media (max-width: 500px) {
+  .reason {
+    &__one {
+      font-size: 32px;
+      width: auto;
+    }
+    &__two {
+      width: auto;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .company {
+    &__wrapper {
+      margin: 0 20px;
+    }
+  }
+  .about {
+    &__firstArticle,
+    &__secondArticle,
+    &__thirdArticle {
+      &-title {
+        width: auto;
+        font-size: 24px;
+        line-height: 30px;
+      }
+    }
+  }
+  .connection {
+    &__question {
+      width: auto;
+    }
+    &__text {
+      width: auto;
+    }
+  }
+}
