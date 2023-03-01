@@ -1,13 +1,9 @@
-const button = document.querySelector("#magnifier");
-const input = document.querySelector("#headerInput");
-// const burgerMenuButton = document.querySelector("#magnifier");
-// const burgerInput = document.querySelector("#headerInput");
+import { toggleFunction } from "./main.js";
 
-button.addEventListener("click", (e) => {
-  e.preventDefault();
-  input.classList.toggle("show");
-});
-// burgerMenuButton.addEventListener("click", (e) => {
-//   e.preventDefault();
-//   burgerInput.classList.toggle("show");
-// });
+const button = document.getElementById("magnifier");
+const button2 = document.getElementById("burgerMagnifier");
+const input = document.getElementById("headerInput");
+const input2 = document.getElementById("burgerInput");
+
+button.addEventListener("click", toggleFunction(input, "show__input"));
+button2.addEventListener("click", toggleFunction(input2, "show__input"));

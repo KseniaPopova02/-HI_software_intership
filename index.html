@@ -5,45 +5,49 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
-    <link rel="stylesheet" href="styles/normalize.css" />
-    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="stylesheet" href="./styles/normalize.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
-  <body>
+  <body id="body">
     <header class="header">
       <div class="container">
         <div class="header__nav">
-          <div class="header__nav-wrapper">
-            <a href="index.html" class="logo">
-              <img src="images/Logo.png" alt="logo" />
-            </a>
+          <a href="index.html" class="header__logo">
+            <img src="images/Logo.png" alt="logo" />
+          </a>
 
-            <nav class="menu">
-              <ul class="menu__list">
-                <li class="menu__list-item">
-                  <a href="index.html" class="menu__list-link menu__list-active"
-                    >Home</a
-                  >
-                </li>
-                <li class="menu__list-item">
-                  <a href="tags.html" class="menu__list-link menu__list-active"
-                    >Tags</a
-                  >
-                </li>
-                <li class="menu__list-item">
-                  <a href="about.html" class="menu__list-link menu__list-active"
-                    >About</a
-                  >
-                </li>
-              </ul>
-            </nav>
-          </div>
-          <div class="button__wrapper">
+          <nav class="menu">
+            <ul class="menu__list">
+              <li class="menu__list-item">
+                <a href="index.html" class="menu__list-link menu__list-active"
+                  >Home</a
+                >
+              </li>
+              <li class="menu__list-item">
+                <a href="tags.html" class="menu__list-link menu__list-active"
+                  >Tags</a
+                >
+              </li>
+              <li class="menu__list-item">
+                <a href="about.html" class="menu__list-link menu__list-active"
+                  >About</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <div class="button__wrapper" id="buttonWrapper">
             <button
               class="burger__button"
-              onclick="this.classList.toggle('opened');this.setAttribute('aria-expanded', this.classList.contains('opened'))"
+              id="burgerButton"
               aria-label="Main Menu"
             >
-              <svg width="50" height="50" viewBox="0 0 100 100">
+              <svg
+                width="2em"
+                height="2em"
+                viewBox="0 0 100 100"
+                fill="currentColor"
+              >
                 <path
                   class="line line1"
                   d="M 20,29.000046 H 80.000231 C 80.000231,29.000046 94.498839,28.817352 94.532987,66.711331 94.543142,77.980673 90.966081,81.670246 85.259173,81.668997 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25.000021,25.000058"
@@ -57,7 +61,7 @@
             </button>
           </div>
 
-          <div class="burger__nav-wrapper">
+          <div class="burger__nav-wrapper" id="burgerNavWrapper">
             <nav class="burger__nav">
               <ul class="burger__list">
                 <li class="burger__list-item">
@@ -73,11 +77,11 @@
             </nav>
             <div class="burger__input">
               <button class="burger__button-login">Login</button>
-              <div class="header__button-wrapper">
+              <div class="burger__button-wrapper">
                 <button class="burger__button-magnifier" id="burgerMagnifier">
                   <img src="../images/search.png" alt="search button" />
                 </button>
-                <input type="text" class="burger__input2" id="burgerIput" />
+                <input type="text" class="burger__input2" id="burgerInput" />
               </div>
             </div>
           </div>
@@ -96,27 +100,29 @@
       </div>
     </header>
     <section class="top">
-      <div class="container">
-        <div class="top__wrapper">
-          <div class="top__background"></div>
-          <div class="top__article">
-            <div class="top__article-pretitle pretitle">FEATURED ARTICLE</div>
-            <h3 class="top__article-title title">
-              World’s Most Dangerous Technology Ever Made.
-            </h3>
-            <div class="top__article-info info">
-              Ralph Hawkins ● May 7, 2019 (10 mins read)
-            </div>
-            <div class="top__article-text text">
-              Proident aliquip velit qui commodo officia qui consectetur dolor
-              ullamco aliquip elit incididunt. Ea minim ex consectetur
-              excepteur. Ex laborum nostrud mollit sint consectetur Lorem amet
-              aliqua do enim. Commodo duis dolor anim excepteur. In aliquip
-              mollit nulla consequat velit magna.
+      <a href="article.html">
+        <div class="container">
+          <div class="top__wrapper">
+            <div class="top__background"></div>
+            <div class="top__article">
+              <div class="top__article-pretitle pretitle">Featured article</div>
+              <h3 class="top__article-title title">
+                World’s Most Dangerous Technology Ever Made.
+              </h3>
+              <div class="top__article-info info">
+                Ralph Hawkins ● May 7, 2019 (10 mins read)
+              </div>
+              <p class="top__article-text text">
+                Proident aliquip velit qui commodo officia qui consectetur dolor
+                ullamco aliquip elit incididunt. Ea minim ex consectetur
+                excepteur. Ex laborum nostrud mollit sint consectetur Lorem amet
+                aliqua do enim. Commodo duis dolor anim excepteur. In aliquip
+                mollit nulla consequat velit magna.
+              </p>
             </div>
           </div>
         </div>
-      </div>
+      </a>
     </section>
 
     <section class="editor">
@@ -124,14 +130,15 @@
         <div class="editor__name">Editor’s Picks</div>
         <div class="editor__article">
           <div class="editor__article-image">
-            <img
-              class="editor__image"
-              src="/images/editors1.jpg"
-              alt="picture of a letter"
-            />
+            <a href="article.html"
+              ><img
+                class="editor__image"
+                src="/images/editors1.jpg"
+                alt="picture of a letter"
+            /></a>
           </div>
           <div class="editor__article-content">
-            <div class="editor__article-pretitle pretitle">MINIMALISM</div>
+            <div class="editor__article-pretitle pretitle">Minimalism</div>
             <h3 class="editor__article-title title">
               <a href="article.html"
                 >Culpa sit Laboris Exercitation ea Fugiat</a
@@ -145,21 +152,22 @@
               Incididunt occaecat et qui dolore consectetur magna. Lorem veniam
               ut et labore consequat ut ex sunt. Ut et nostrud aliquip do anim
               proident ad nulla consectetur eu aute ex anim mollit. Anim aute
-              exercitation nisi fugiat. Dolor velit excepteur commodo proident
-              nulla commodo ullamco labore et esse.
+              exercitation nisi fugiat.
             </p>
           </div>
         </div>
         <div class="editor__article">
           <div class="editor__article-image">
-            <img
-              class="editor__image"
-              src="/images/editors2.jpg"
-              alt="picture of a dj console"
-            />
+            <a href="article.html">
+              <img
+                class="editor__image"
+                src="/images/editors2.jpg"
+                alt="picture of a dj console"
+              />
+            </a>
           </div>
           <div class="editor__article-content">
-            <div class="editor__article-pretitle pretitle">TECHNOLOGY</div>
+            <div class="editor__article-pretitle pretitle">Technology</div>
             <h3 class="editor__article-title title">
               <a href="article.html">Amet non Ex Officia nulla Cupidatat</a>
             </h3>
@@ -177,14 +185,15 @@
         </div>
         <div class="editor__article">
           <div class="editor__article-image">
-            <img
-              class="editor__image"
-              src="/images/editors3.jpg"
-              alt="picture of a tower"
-            />
+            <a href="article.html"
+              ><img
+                class="editor__image"
+                src="/images/editors3.jpg"
+                alt="picture of a tower"
+            /></a>
           </div>
           <div class="editor__article-content">
-            <div class="editor__article-pretitle pretitle">ARTICLE</div>
+            <div class="editor__article-pretitle pretitle">Article</div>
             <h3 class="editor__article-title title">
               <a href="article.html">Dolor ex Tempor Cotur Culpa li</a>
             </h3>
@@ -205,25 +214,27 @@
 
     <section class="middle">
       <div class="container">
-        <div class="middle__wrapper">
-          <div class="middle__background"></div>
-          <div class="middle__article">
-            <div class="middle__article-pretitle pretitle">INTERIOR</div>
-            <h3 class="middle__article-title title">
-              <a href="article.html">Laborum Ullamco Sunt id ut Sunt</a>
-            </h3>
-            <div class="middle__article-info info">
-              Bessie Hawkins ● May 7, 2019 (10 mins read)
+        <a href="article.html">
+          <div class="middle__wrapper">
+            <div class="middle__background"></div>
+            <div class="middle__article">
+              <div class="middle__article-pretitle pretitle">Interior</div>
+              <h3 class="middle__article-title title">
+                <a href="article.html">Laborum Ullamco Sunt id ut Sunt</a>
+              </h3>
+              <div class="middle__article-info info">
+                Bessie Hawkins ● May 7, 2019 (10 mins read)
+              </div>
+              <p class="middle__article-text text">
+                Proident aliquip velit qui commodo officia qui consectetur dolor
+                ullamco aliquip elit incididunt. Ea minim ex consectetur
+                excepteur. Ex laborum nostrud mollit sint consectetur Lorem amet
+                aliqua do enim. Commodo duis dolor anim excepteur. In aliquip
+                mollit nulla consequat velit magna.
+              </p>
             </div>
-            <p class="middle__article-text text">
-              Proident aliquip velit qui commodo officia qui consectetur dolor
-              ullamco aliquip elit incididunt. Ea minim ex consectetur
-              excepteur. Ex laborum nostrud mollit sint consectetur Lorem amet
-              aliqua do enim. Commodo duis dolor anim excepteur. In aliquip
-              mollit nulla consequat velit magna.
-            </p>
           </div>
-        </div>
+        </a>
       </div>
     </section>
 
@@ -233,10 +244,12 @@
           <div class="articles__column">
             <div class="articles__article">
               <div class="articles__img">
-                <img src="../images/articles1.jpg" alt="picture of waves" />
+                <a href="article.html"
+                  ><img src="../images/articles1.jpg" alt="picture of waves"
+                /></a>
               </div>
               <div class="articles__content">
-                <div class="articles__pretitle pretitle">NATURE</div>
+                <div class="articles__pretitle pretitle">Nature</div>
                 <h3 class="articles__title title">
                   <a href="article.html">Tempor deserunt Sunt Qui</a>
                 </h3>
@@ -253,10 +266,12 @@
 
             <div class="articles__article">
               <div class="articles__img">
-                <img src="../images/articles2.jpg" alt="picture of a plant" />
+                <a href="article.html">
+                  <img src="../images/articles2.jpg" alt="picture of a plant" />
+                </a>
               </div>
               <div class="articles__content">
-                <div class="articles__pretitle pretitle">PLANTS</div>
+                <div class="articles__pretitle pretitle">Plants</div>
                 <h3 class="articles__title title">
                   <a href="article.html">Occaecat Anim eu Qui</a>
                 </h3>
@@ -273,10 +288,12 @@
 
             <div class="articles__article">
               <div class="articles__img">
-                <img src="../images/articles3.jpg" alt="picture of food" />
+                <a href="article.html">
+                  <img src="../images/articles3.jpg" alt="picture of food" />
+                </a>
               </div>
               <div class="articles__content">
-                <div class="articles__pretitle pretitle">FOOD</div>
+                <div class="articles__pretitle pretitle">Food</div>
                 <h3 class="articles__title title">
                   <a href="article.html"
                     >Fugiat Incididunt Voluptate Consequat</a
@@ -293,13 +310,15 @@
 
             <div class="articles__article">
               <div class="articles__img">
-                <img
-                  src="../images/articles4.jpg"
-                  alt="picture of a graphity wall"
-                />
+                <a href="article.html">
+                  <img
+                    src="../images/articles4.jpg"
+                    alt="picture of a graphity wall"
+                  />
+                </a>
               </div>
               <div class="articles__content">
-                <div class="articles__pretitle pretitle">COLORFUL</div>
+                <div class="articles__pretitle pretitle">Colorful</div>
                 <h3 class="articles__title title">
                   <a href="article.html">Occaecat Anim eu Qui</a>
                 </h3>
@@ -316,11 +335,8 @@
           </div>
 
           <div class="articles__tags">
-            <div class="articles__tags-columns">
-              <div class="articles__tags-specific name">tags.</div>
-            </div>
-
-            <div class="articles__tags-columns">
+            <div class="articles__tags-specific name">tags.</div>
+            <div class="articles__tags-column">
               <div class="articles__tags-specific">Technology</div>
               <div class="articles__tags-specific">Open Source</div>
               <div class="articles__tags-specific">JavaScript</div>
@@ -330,8 +346,6 @@
               <div class="articles__tags-specific">Herbivores</div>
               <div class="articles__tags-specific">HTML</div>
               <div class="articles__tags-specific">CSS</div>
-            </div>
-            <div class="articles__tags-columns">
               <div class="articles__tags-specific">PHP</div>
               <div class="articles__tags-specific">Web Technologies</div>
               <div class="articles__tags-specific">Career</div>
@@ -347,7 +361,8 @@
         </div>
       </div>
     </section>
-    <script src="nav.js"></script>
-    <script src="magnifier.js"></script>
+    <script src="cross.js"></script>
+    <script type="module" src="nav.js"></script>
+    <script type="module" src="magnifier.js"></script>
   </body>
 </html>

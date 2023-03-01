@@ -72,18 +72,11 @@
 
 @media (max-width: 1200px) {
   .articles {
+    &__tags {
+      margin-top: 25px;
+    }
     &__wrapper {
       display: block;
-    }
-    &__tags {
-      display: flex;
-      justify-content: center;
-      &-columns + &-columns {
-        margin-left: 15px;
-      }
-    }
-    &__column {
-      margin-bottom: 65px;
     }
   }
   .arrows {
@@ -99,6 +92,9 @@
       display: block;
       margin: 0 17px;
       text-align: center;
+      &-content {
+        margin-top: 150px;
+      }
       &-image {
         margin-right: 0;
       }
@@ -126,7 +122,7 @@
     }
   }
   .header__input {
-    width: 200px;
+    width: 200px !important;
   }
 }
 
@@ -152,7 +148,7 @@
     }
   }
   .header__input {
-    width: 100px;
+    width: 100px !important;
   }
 }
 
@@ -213,6 +209,10 @@
     &__background {
       display: none;
     }
+    &__wrapper {
+      border: 2px solid #000;
+      padding: 15px;
+    }
     &__article {
       position: static;
       padding: 0;
@@ -249,6 +249,10 @@
   .middle {
     &__background {
       display: none;
+    }
+    &__wrapper {
+      border: 2px solid #000;
+      padding: 15px;
     }
     &__article {
       position: static;
@@ -288,6 +292,9 @@
   .search__input {
     width: 300px;
   }
+  .burger__input2 {
+    width: 200px !important;
+  }
 }
 
 @media (max-width: 400px) {
@@ -317,5 +324,19 @@
   }
   .burger__input2 {
     width: 200px;
+  }
+
+  .editor {
+    &__article-content {
+      margin-top: 110px;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .editor {
+    &__article-content {
+      margin-top: 50px;
+    }
   }
 }

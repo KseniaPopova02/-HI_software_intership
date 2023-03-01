@@ -4,14 +4,19 @@
 
 // Home page
 .header {
-  margin-top: 31px;
+  padding-top: 31px;
+  position: sticky;
+  z-index: 10;
+  &__logo {
+    line-height: 0;
+  }
   &__input {
-    display: none;
-    border: 2px solid #1c1c1c;
+    border: 2px solid transparent;
     border-radius: 10px;
     padding: 10px;
     margin-right: 20px;
-    width: 363px;
+    width: 0;
+    transition: width 0.5s, border-color 0.5s;
   }
   &__nav {
     display: flex;
@@ -19,7 +24,6 @@
     align-items: center;
     @extend %lb-regular;
     font-size: 20px;
-    position: relative;
   }
   &__nav-wrapper {
     display: flex;
@@ -27,11 +31,16 @@
   }
   &__button {
     display: flex;
+    margin-left: auto;
+  }
+  &__button-wrapper {
+    position: relative;
   }
   &__button-magnifier {
     position: absolute;
-    right: 150px;
-    top: 15px;
+    top: 50%;
+    right: 35px;
+    transform: translateY(-50%);
     background-color: transparent;
   }
   &__button-login {
@@ -42,11 +51,19 @@
   }
 }
 
+.show__input {
+  width: 363px !important;
+  border-color: #1c1c1c !important;
+}
+
 .menu {
+  margin-left: 31px;
   &__list-item {
     font-size: 20px;
     display: inline-block;
-    margin-left: 31px;
+    & + & {
+      margin-left: 31px;
+    }
   }
   &__list-link:active {
     @extend %lb-bold;
@@ -80,6 +97,9 @@
 .top {
   margin-top: 43px;
   margin-bottom: 68px;
+  &__wrapper {
+    position: relative;
+  }
   &__background {
     background-image: url("../images/article_image.jpg");
     height: 592px;
@@ -112,8 +132,7 @@
       width: 190px;
       left: 50%;
       transform: translate(-50%, -50%);
-
-      margin-top: 14px;
+      top: 64px;
       position: absolute;
     }
   }
@@ -124,11 +143,14 @@
     }
   }
   &__image {
-    width: 371px;
-    height: 298px;
+    max-width: 100%;
+    max-height: 298px;
   }
   &__article-image {
     margin-right: 55px;
+    line-height: 0;
+    max-width: 100%;
+    max-height: 177px;
   }
 
   &__article-title {
@@ -147,8 +169,11 @@
     max-width: 509px;
     position: absolute;
     top: 50%;
-    right: -190px;
-    transform: translate(-50%, -50%);
+    right: 45px;
+    transform: translateY(-50%);
+  }
+  &__wrapper {
+    position: relative;
   }
   &__background {
     background-image: url("/images/interior_mage.jpg");
@@ -157,7 +182,10 @@
 }
 
 .articles {
-  padding-bottom: 70px; //???
+  padding-bottom: 70px;
+  &__tags-column {
+    margin-top: 25px;
+  }
   &__wrapper {
     display: flex;
     justify-content: space-between;
@@ -170,6 +198,7 @@
   }
   &__img {
     margin-right: 37px;
+    line-height: 0;
   }
   &__text {
     width: 538px;
@@ -234,18 +263,22 @@
   stroke-width: 6;
 }
 
+.show__nav {
+  transform: translateY(0) !important;
+}
+
 .burger {
   &__nav {
     padding: 20px;
     &-wrapper {
-      height: 250px;
-      display: none;
-      position: absolute;
-      top: 70px;
+      position: fixed;
+      transform: translateY(-150%);
+      transition: all 0.5s;
+      top: 130px;
+      min-height: 100vh;
       width: 100%;
-      z-index: 10;
-      background-color: rgba(0, 0, 0, 0.7);
-      color: #fff;
+      background-color: #fff;
+      color: #000;
     }
   }
   &__input {
@@ -254,6 +287,10 @@
 
   &__button {
     display: none;
+    &-wrapper {
+      position: relative;
+      margin-top: 20px;
+    }
     &-login {
       background-color: #fff;
       border: solid #000 2px;
@@ -262,16 +299,20 @@
     }
     &-magnifier {
       position: absolute;
-      top: 170px;
-      background-color: #fff;
+      top: 50%;
+      left: 5px;
+      transform: translateY(-50%);
+      background-color: transparent;
       border-radius: 10px;
     }
   }
   &__input2 {
-    margin-top: 10px;
-    padding: 10px;
+    border: 2px solid transparent;
     border-radius: 10px;
-    display: none;
+    padding: 10px;
+    margin-right: 20px;
+    transition: width 0.5s, border-color 0.5s;
+    width: 0;
   }
 }
 
@@ -293,14 +334,15 @@
     padding: 20px;
   }
   &__input-wrapper {
+    position: relative;
     display: flex;
     justify-content: center;
-    position: relative;
   }
   &__button {
     position: absolute;
-    bottom: 23%;
-    left: 83%;
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
     background-color: transparent;
   }
   &__tags-wrapper {
@@ -308,21 +350,15 @@
   }
   &__tags {
     display: flex;
-    text-align: center;
+    flex-wrap: wrap;
     justify-content: center;
-    flex-direction: column;
   }
-  &__tags-rows {
-    display: flex;
-    justify-content: center;
-    & + & {
-      margin-top: 25px;
-    }
-  }
+
   &__tags-item {
     border: 1px solid #000;
     border-radius: 50px;
     padding: 10px 14px;
+    margin-top: 15px;
     & + & {
       margin-left: 15px;
     }

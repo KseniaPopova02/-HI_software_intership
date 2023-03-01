@@ -1,14 +1,14 @@
-document.querySelector("#searchInput").oninput = function () {
-  let val = this.value.trim();
-  let searchItems = document.querySelectorAll(".search__tags li");
-  if (val != "") {
+document.getElementById("searchInput").oninput = function () {
+  const val = this.value.trim();
+  const searchItems = document.querySelectorAll(".search__tags li");
+  if (val) {
     searchItems.forEach(function (elem) {
       if (elem.innerText.search(val) == -1) {
         elem.classList.add("hide");
         elem.innerHTML = elem.innerText;
       } else {
         elem.classList.remove("hide");
-        let str = elem.innerText;
+        const str = elem.innerText;
         elem.innerHTML = insertMark(
           str,
           elem.innerText.search(val),
