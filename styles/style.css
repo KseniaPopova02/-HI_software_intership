@@ -383,6 +383,7 @@ body {
   border-radius: 10px;
 }
 .burger__input2 {
+  text-align: end;
   border: 2px solid transparent;
   border-radius: 10px;
   padding: 10px;
@@ -409,8 +410,9 @@ body {
 }
 .search__input-wrapper {
   position: relative;
-  display: flex;
-  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 707px;
 }
 .search__button {
   position: absolute;
@@ -458,7 +460,7 @@ body {
   margin: 30px auto;
 }
 
-.about {
+.about__wrapper {
   margin-bottom: 226px;
   background-color: #1c1c1c;
   margin-bottom: 226px;
@@ -466,18 +468,22 @@ body {
   position: relative;
   z-index: -5;
 }
+.about__firstArticle {
+  padding: 146px 86px 0 96px;
+  display: flex;
+}
 .about__firstArticle::after {
   content: "";
   height: 1016px;
   background-color: #fff;
   width: 8px;
-  left: 1104px;
+  right: 200px;
   top: 0;
   position: absolute;
   z-index: -1;
 }
 .about__firstArticle-content {
-  margin: 172px 60px 52px 96px;
+  margin-top: 26px;
 }
 .about__firstArticle-title {
   text-transform: uppercase;
@@ -487,14 +493,15 @@ body {
   width: 436px;
 }
 .about__firstArticle-image {
-  margin: 146px 86px 0 0;
+  margin-left: 50px;
 }
 .about__firstArticle-image img {
-  width: 569px;
-  height: 419px;
+  max-width: 100%;
+  max-height: 419px;
 }
 .about__secondArticle {
-  flex-direction: column;
+  display: flex;
+  flex-direction: column-reverse;
   margin: -95px 361px 0px 327px;
 }
 .about__secondArticle-content {
@@ -508,8 +515,8 @@ body {
   width: 524px;
 }
 .about__secondArticle-image img {
-  width: 557px;
-  height: 391px;
+  max-width: 100%;
+  max-height: 391px;
 }
 .about__thirdArticle {
   margin-top: 202px;
@@ -544,8 +551,8 @@ body {
   margin-left: 20px;
 }
 .about__thirdArticle-image img {
-  width: 350px;
-  height: 350px;
+  max-width: 100%;
+  max-height: 350px;
 }
 .about__thirdArticle-image img:last-child {
   width: 270px;
@@ -578,7 +585,7 @@ body {
   margin: 0 auto;
 }
 
-.connection {
+.connection__wrapper {
   background-color: #1c1c1c;
   color: #fff;
   display: flex;
@@ -602,6 +609,9 @@ body {
   margin-top: 28px;
   margin-bottom: 150px;
 }
+.connection__socials a {
+  line-height: 0;
+}
 .connection__socials a + a {
   margin-left: 15px;
 }
@@ -611,18 +621,19 @@ body {
 }
 .article__img {
   background-image: url("/images/article_image.jpg");
+  background-position: center;
   height: 592px;
 }
 .article__content {
   text-align: center;
+  margin: 0 auto;
+  max-width: 657px;
 }
 .article__title {
   margin: 54px auto 0 auto;
-  width: 790px;
   line-height: 52px;
 }
 .article__text {
-  width: 652px;
   margin: 0 auto;
   text-align: left;
   line-height: 24px;
@@ -635,6 +646,12 @@ body {
   margin: 72px auto 163px auto;
   width: 655px;
 }
+.article__author-avatar {
+  line-height: 0;
+}
+.article__author-avatar img {
+  border-radius: 50%;
+}
 .article__author-column1 {
   margin-right: 37px;
 }
@@ -645,7 +662,7 @@ body {
   margin-bottom: 15px;
 }
 .article__author-name {
-  margin-top: 15px;
+  padding-top: 15px;
   line-height: 41px;
   font-size: 33px;
   color: #1c1c1c;
@@ -664,6 +681,9 @@ body {
 }
 .arrows__button {
   line-height: 0;
+  background-color: #000;
+  padding: 15px;
+  text-align: center;
 }
 .arrows__text {
   font-size: 20px;
@@ -695,28 +715,48 @@ body {
   .search__wrapper {
     margin: 0 20px;
   }
+  .about__firstArticle-text, .about__secondArticle-text, .about__thirdArticle-text {
+    width: auto;
+    text-align: center;
+  }
+  .about__firstArticle-title, .about__secondArticle-title, .about__thirdArticle-title {
+    width: auto;
+    text-align: center;
+  }
+  .about__article {
+    display: flex;
+    align-items: center;
+  }
   .about__wrapper {
-    margin: 0 20px;
+    margin: 0 20px 226px;
     padding: 20px 0;
   }
   .about__firstArticle {
+    padding: 0;
     flex-direction: column;
     margin: 20px;
   }
   .about__firstArticle-content {
-    margin: 24px 0px 0px 10px;
+    margin-right: 10px;
   }
   .about__firstArticle-image {
     margin-top: 32px;
+    margin-left: 0;
   }
   .about__firstArticle::after {
     display: none;
   }
   .about__secondArticle {
     margin: 20px;
+    flex-direction: column;
+  }
+  .about__secondArticle-content {
+    margin-left: 0;
+  }
+  .about__secondArticle-image {
+    margin-top: 20px;
   }
   .about__thirdArticle {
-    flex-direction: row;
     margin: 20px;
   }
   .about__thirdArticle::before {
@@ -724,15 +764,22 @@ body {
   }
   .about__thirdArticle-content {
     margin: 20px;
+    text-align: center;
   }
-  .about__thirdArticle-image {
-    display: none;
+  .about__thirdArticle-title {
+    width: auto;
   }
   .article__wrapper {
     margin: 0 20px;
   }
   .article__title {
     width: auto;
+  }
+  .connection__wrapper {
+    margin: 0 20px;
+  }
+  .reason__wrapper {
+    margin: 0 30px;
   }
 }
 @media (max-width: 1200px) {
@@ -743,6 +790,11 @@ body {
     display: block;
   }
   .arrows__text {
+    display: none;
+  }
+}
+@media (max-width: 1100px) {
+  .about__thirdArticle-image img + img {
     display: none;
   }
 }
@@ -797,6 +849,9 @@ body {
   .search__input {
     width: 437px;
   }
+  .search__input-wrapper {
+    max-width: 437px;
+  }
   .header__input {
     width: 100px !important;
   }
@@ -810,16 +865,6 @@ body {
   }
   .burger__button {
     display: block;
-  }
-  .about__firstArticle, .about__secondArticle, .about__thirdArticle {
-    margin-top: 20px;
-    display: block;
-  }
-  .about__thirdArticle-title {
-    width: 460px;
-  }
-  .about__firstArticle-image img, .about__secondArticle-image img {
-    display: none;
   }
   .article__text {
     width: auto;
@@ -884,12 +929,6 @@ body {
     font-size: 24px;
     line-height: 40px;
   }
-  .about__firstArticle-text, .about__secondArticle-text, .about__thirdArticle-text {
-    width: auto;
-  }
-  .about__firstArticle-title, .about__secondArticle-title, .about__thirdArticle-title {
-    width: auto;
-  }
 }
 @media (max-width: 500px) {
   .reason__one {
@@ -926,6 +965,9 @@ body {
   }
   .editor__article-content {
     margin-top: 110px;
+  }
+  .search__input {
+    width: 290px;
   }
 }
 @media (max-width: 320px) {

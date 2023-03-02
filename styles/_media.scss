@@ -25,18 +25,36 @@
     }
   }
   .about {
+    &__firstArticle,
+    &__secondArticle,
+    &__thirdArticle {
+      &-text {
+        width: auto;
+        text-align: center;
+      }
+      &-title {
+        width: auto;
+        text-align: center;
+      }
+    }
+    &__article {
+      display: flex;
+      align-items: center;
+    }
     &__wrapper {
-      margin: 0 20px;
+      margin: 0 20px 226px;
       padding: 20px 0;
     }
     &__firstArticle {
+      padding: 0;
       flex-direction: column;
       margin: 20px;
       &-content {
-        margin: 24px 0px 0px 10px;
+        margin-right: 10px;
       }
       &-image {
         margin-top: 32px;
+        margin-left: 0;
       }
       &::after {
         display: none;
@@ -44,19 +62,26 @@
     }
     &__secondArticle {
       margin: 20px;
+      flex-direction: column;
+      &-content {
+        margin-left: 0;
+      }
+      &-image {
+        margin-top: 20px;
+      }
     }
     &__thirdArticle {
-      flex-direction: row;
-
       margin: 20px;
+
       &::before {
         display: none;
       }
       &-content {
         margin: 20px;
+        text-align: center;
       }
-      &-image {
-        display: none;
+      &-title {
+        width: auto;
       }
     }
   }
@@ -67,6 +92,12 @@
     &__title {
       width: auto;
     }
+  }
+  .connection__wrapper {
+    margin: 0 20px;
+  }
+  .reason__wrapper {
+    margin: 0 30px;
   }
 }
 
@@ -81,6 +112,13 @@
   }
   .arrows {
     &__text {
+      display: none;
+    }
+  }
+}
+@media (max-width: 1100px) {
+  .about__thirdArticle-image {
+    img + img {
       display: none;
     }
   }
@@ -146,6 +184,9 @@
     &__input {
       width: 437px;
     }
+    &__input-wrapper {
+      max-width: 437px;
+    }
   }
   .header__input {
     width: 100px !important;
@@ -166,28 +207,7 @@
   .burger__button {
     display: block;
   }
-  .about {
-    &__firstArticle,
-    &__secondArticle,
-    &__thirdArticle {
-      margin-top: 20px;
-      display: block;
-    }
-    &__thirdArticle {
-      &-title {
-        width: 460px;
-      }
-    }
 
-    &__firstArticle,
-    &__secondArticle {
-      &-image {
-        img {
-          display: none;
-        }
-      }
-    }
-  }
   .article {
     &__text {
       width: auto;
@@ -265,19 +285,6 @@
       }
     }
   }
-
-  .about {
-    &__firstArticle,
-    &__secondArticle,
-    &__thirdArticle {
-      &-text {
-        width: auto;
-      }
-      &-title {
-        width: auto;
-      }
-    }
-  }
 }
 @media (max-width: 500px) {
   .reason {
@@ -329,6 +336,11 @@
   .editor {
     &__article-content {
       margin-top: 110px;
+    }
+  }
+  .search {
+    &__input {
+      width: 290px;
     }
   }
 }
