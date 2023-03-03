@@ -2,8 +2,8 @@ import { toggleFunction } from "./main.js";
 
 const button = document.getElementById("magnifier");
 const button2 = document.getElementById("burgerMagnifier");
-const input = document.getElementById("headerInput");
-const input2 = document.getElementById("burgerInput");
+const inputHeader = document.getElementById("headerInput");
+const inputBurger = document.getElementById("burgerInput");
 
 const changePage = (e) => {
   if (e.key === "Enter") {
@@ -12,14 +12,32 @@ const changePage = (e) => {
   }
 };
 
-const getValue = () => {
-  searchInput.value = input.value;
+const clearInput = (input) => {
+  input.value = "";
 };
 
-button.addEventListener("click", toggleFunction(input, "show__input"));
-button2.addEventListener("click", toggleFunction(input2, "show__input"));
+const addInputValueToLocalStorage = (elem) => {
+  if (elem) {
+    elem.value = localStorage.getItem("input") || "";
+    elem.addEventListener("input", function () {
+      localStorage.setItem("input", this.value);
+    });
+  }
+  clearInput(elem);
+};
 
-input.addEventListener("keypress", changePage);
-input2.addEventListener("keypress", changePage);
+document.addEventListener(
+  "DOMContentLoaded",
+  addInputValueToLocalStorage(inputHeader)
+);
 
-input.addEventListener("input", getValue);
+document.addEventListener(
+  "DOMContentLoaded",
+  addInputValueToLocalStorage(inputBurger)
+);
+
+button.addEventListener("click", toggleFunction(inputHeader, "show__input"));
+button2.addEventListener("click", toggleFunction(inputBurger, "show__input"));
+
+inputHeader.addEventListener("keypress", changePage);
+inputBurger.addEventListener("keypress", changePage);

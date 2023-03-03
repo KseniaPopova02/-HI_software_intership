@@ -138,10 +138,12 @@
   }
   &__article {
     display: flex;
+    justify-content: center;
     & + & {
       margin-top: 63px;
     }
   }
+
   &__image {
     max-width: 100%;
     max-height: 298px;
@@ -348,7 +350,7 @@
     background-color: transparent;
   }
   &__tags-wrapper {
-    margin-top: 59px;
+    margin: 59px 0;
   }
   &__tags {
     display: flex;
