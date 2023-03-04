@@ -7,8 +7,11 @@ const inputBurger = document.getElementById("burgerInput");
 
 const changePage = (e) => {
   if (e.key === "Enter") {
+    //getting value from input
+    const value = inputHeader.value || inputBurger.value;
     e.preventDefault;
-    window.location.href = "./tags.html";
+    //redirection
+    window.location.href = `./tags.html?search=${value}`;
   }
 };
 
@@ -17,24 +20,18 @@ const clearInput = (input) => {
 };
 
 const addInputValueToLocalStorage = (elem) => {
-  if (elem) {
-    elem.value = localStorage.getItem("input") || "";
-    elem.addEventListener("input", function () {
-      localStorage.setItem("input", this.value);
-    });
+  if (!elem) {
+    return;
   }
+  elem.addEventListener("input", (event) => {
+    localStorage.setItem("input", event.target.value);
+  });
+
   clearInput(elem);
 };
 
-document.addEventListener(
-  "DOMContentLoaded",
-  addInputValueToLocalStorage(inputHeader)
-);
-
-document.addEventListener(
-  "DOMContentLoaded",
-  addInputValueToLocalStorage(inputBurger)
-);
+addInputValueToLocalStorage(inputHeader);
+addInputValueToLocalStorage(inputBurger);
 
 button.addEventListener("click", toggleFunction(inputHeader, "show__input"));
 button2.addEventListener("click", toggleFunction(inputBurger, "show__input"));

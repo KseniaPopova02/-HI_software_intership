@@ -1,10 +1,10 @@
-let searchInput = document.getElementById("searchInput");
+const searchInput = document.getElementById("searchInput");
 const searchTags = document.querySelectorAll(".search__tags li");
 
-const filterList = () => {
-  const filter = searchInput.value.toLowerCase();
+const filterList = (filter) => {
   searchTags.forEach((item) => {
     let text = item.textContent;
+
     if (text.toLocaleLowerCase().includes(filter.toLocaleLowerCase())) {
       item.style.display = "";
     } else {
@@ -14,11 +14,15 @@ const filterList = () => {
 };
 
 searchInput.addEventListener("input", filterList);
-console.log(searchInput.value);
-const getItemFromLocalStorage = () => {
-  return (searchInput.value = localStorage.getItem("input"));
-};
-console.log(getItemFromLocalStorage());
 
-// Ты сначала меняешь value инпута, потом вешаешь на него обработчик.
-// Код в js-е последовательный
+const getItemFromLocalStorage = () => {
+  localStorage.getItem("input");
+};
+
+const savedValue = getItemFromLocalStorage();
+searchInput.value = savedValue;
+filterList(savedValue);
+
+// window.addEventListener("onload", () => {
+//   localStorage.clear();
+// });
