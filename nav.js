@@ -1,12 +1,6 @@
-const burgerButton = document.querySelector(".button__wrapper");
-const burgerNav = document.querySelector(".burger__nav-wrapper");
+import { toggleFunction } from "./main.js";
 
-// const toggleNav = () => {
-//   burgerNav.classList.toggle("show");
-// };
-// burgerButton.onclick = toggleNav;
+const burgerButton = document.getElementById("burgerButton");
+const burgerNav = document.getElementById("burgerNavWrapper");
 
-burgerButton.addEventListener("click", (e) => {
-  e.preventDefault();
-  burgerNav.classList.toggle("show");
-});
+burgerButton.addEventListener("click", toggleFunction(burgerNav, "show__nav"));
