@@ -45,8 +45,6 @@ const filterList = (filter) => {
 
     if (!text.toLocaleLowerCase().includes(filter.toLocaleLowerCase())) {
       elem.classList.add("hide");
-      //?????
-      elem.innerHTML = elem.innerText;
     } else {
       elem.classList.remove("hide");
 
@@ -67,7 +65,7 @@ const getSearchItem = () => {
   return queryParams[1] || "";
 };
 
-let savedValue = getSearchItem();
+const savedValue = getSearchItem();
 
 searchInput.value = savedValue;
 
