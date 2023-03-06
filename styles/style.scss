@@ -185,8 +185,14 @@
 
 .articles {
   padding-bottom: 70px;
+  &__title {
+    max-width: 538px;
+  }
   &__tags-column {
     margin-top: 25px;
+    div + div {
+      margin-top: 25px;
+    }
   }
   &__wrapper {
     display: flex;

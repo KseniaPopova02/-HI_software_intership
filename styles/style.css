@@ -261,7 +261,13 @@ body {
 .articles {
   padding-bottom: 70px;
 }
+.articles__title {
+  max-width: 538px;
+}
 .articles__tags-column {
+  margin-top: 25px;
+}
+.articles__tags-column div + div {
   margin-top: 25px;
 }
 .articles__wrapper {
@@ -786,7 +792,8 @@ body {
 }
 @media (max-width: 1200px) {
   .articles__tags {
-    margin-top: 25px;
+    margin-top: 60px;
+    text-align: center;
   }
   .articles__wrapper {
     display: block;
